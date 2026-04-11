@@ -654,7 +654,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
 
   <div class="np-cta reveal">
     <div><h3>See Nimba People in action</h3><p>Interactive demo — no sign-up required. Try all features as HR Admin or Employee.</p></div>
-    <a href="https://demo.dithanimbaholdings.co.za" target="_blank" class="btn-teal">View Live Demo →</a>
+    <a href="https://nimba-people-demo.netlify.app" target="_blank" class="btn-teal">View Live Demo →</a>
   </div>
 </section>
 
@@ -722,7 +722,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
       <p class="sp reveal">Whether you need HR software, a cybersecurity assessment, or want to become a reseller partner — we'd love to hear from you.</p>
 
       <div class="c-items reveal">
-        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a></div></div></div>
+        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:mondliwes@gmail.com">mondliwes@gmail.com</a></div></div></div>
         <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="c-lbl">Location</div><div class="c-val">Johannesburg, South Africa</div></div></div>
         <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><div class="c-lbl">Website</div><div class="c-val"><a href="https://dithanimbaholdings.co.za">dithanimbaholdings.co.za</a></div></div></div>
       </div>
@@ -773,12 +773,12 @@ footer{background:var(--navy);padding:64px 5vw 36px}
       <p class="foot-about">Building South Africa's digital infrastructure through specialist technology divisions — one business at a time.</p>
     </div>
     <div class="foot-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#divisions">Divisions</a></li><li><a href="#why">Why DithaNimba</a></li><li><a href="#contact">Contact</a></li></ul></div>
-    <div class="foot-col"><h4>Nimba People</h4><ul><li><a href="#nimba-people">Features</a></li><li><a href="https://demo.dithanimbaholdings.co.za" target="_blank">Live Demo</a></li><li><a href="#contact">Reseller Programme</a></li><li><a href="#contact">Pricing</a></li></ul></div>
+    <div class="foot-col"><h4>Nimba People</h4><ul><li><a href="#nimba-people">Features</a></li><li><a href="https://nimba-people-demo.netlify.app" target="_blank">Live Demo</a></li><li><a href="#contact">Reseller Programme</a></li><li><a href="#contact">Pricing</a></li></ul></div>
     <div class="foot-col"><h4>Nimba Security</h4><ul><li><a href="#nimba-security">Services</a></li><li><a href="#nimba-security">Pentest Process</a></li><li><a href="#nimba-security">Training</a></li><li><a href="#contact">Book Assessment</a></li></ul></div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 DithaNimba Holdings. All rights reserved.</span>
-    <span>Johannesburg, South Africa &nbsp;·&nbsp; <a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a></span>
+    <span>© 2025 DithaNimba Holdings. All rights reserved.</span>
+    <span>Johannesburg, South Africa &nbsp;·&nbsp; <a href="mailto:mondliwes@gmail.com">mondliwes@gmail.com</a></span>
   </div>
 </footer>
 
@@ -800,4 +800,17 @@ function toggleMenu(){document.getElementById('mob').classList.toggle('open')}
 function closeMob(){document.getElementById('mob').classList.remove('open')}
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    co
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+function submitForm(e){
+  e.preventDefault();
+  const ok = document.getElementById('form-ok');
+  ok.style.display = 'block';
+  e.target.reset();
+  setTimeout(() => ok.style.display = 'none', 5000);
+}
+</script>
+</body>
+</html>
