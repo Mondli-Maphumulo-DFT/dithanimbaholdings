@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>DithaNimba Holdings — Building Africa's Digital Future</title>
+<meta name="description" content="DithaNimba Holdings — home of Nimba People (HR & ERP) and Nimba Security (Cybersecurity). South African technology holding company."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* exact Nimba People palette */
+  --navy:      #1a3a5c;
+  --navy-dark: #122a44;
+  --navy-mid:  #1e3a5c;
+  --navy-deep: #0f2035;
+  --navy-light:#e3edf6;
+  --bg:        #f8fafc;
+  --surface:   #ffffff;
+  --border:    #e2e8f0;
+  --border2:   #cbd5e1;
+  --gold:      #C9A84C;
+  --gold-light:#fef3c7;
+  --gold-dark: #92640a;
+  --teal:      #06B6D4;
+  --teal-light:#cffafe;
+  --teal-dark: #0e7490;
+  --red:       #E63946;
+  --red-light: #fee2e2;
+  --red-dark:  #991b1b;
+  --muted:     #64748b;
+  --muted2:    #94a3b8;
+  --text:      #0f172a;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--navy);border-radius:2px}
+
+/* ── NAV ── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:68px;padding:0 5vw;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(248,250,252,0);
+  backdrop-filter:blur(0px);
+  border-bottom:1px solid transparent;
+  transition:all 0.35s;
+}
+#nav.scrolled{background:rgba(248,250,252,0.96);backdrop-filter:blur(20px);border-bottom-color:var(--border);box-shadow:0 1px 12px rgba(0,0,0,0.06)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-hex{
+  width:34px;height:34px;
+  background:var(--navy);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:background 0.2s;
+}
+#nav.scrolled .nav-hex{background:var(--navy)}
+.nav-hex span{font-family:'Syne',sans-serif;font-size:8px;font-weight:800;color:#fff;letter-spacing:0.02em}
+.nav-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--navy);letter-spacing:0.01em}
+/* hero nav - white version */
+.nav-name-hero{color:#fff}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:400;transition:color 0.2s}
+.nav-links a:hover{color:#fff}
+#nav.scrolled .nav-links a{color:var(--muted)}
+#nav.scrolled .nav-links a:hover{color:var(--navy)}
+#nav.scrolled .nav-name-hero{color:var(--navy)}
+.nav-cta{
+  background:rgba(255,255,255,0.15);color:#fff;
+  border:1px solid rgba(255,255,255,0.35);
+  padding:8px 20px;border-radius:8px;
+  font-size:13px;font-weight:500;
+  text-decoration:none;transition:all 0.2s;
+  backdrop-filter:blur(8px);
+}
+.nav-cta:hover{background:rgba(255,255,255,0.25)}
+#nav.scrolled .nav-cta{background:var(--navy);color:#fff;border-color:var(--navy)}
+#nav.scrolled .nav-cta:hover{background:var(--navy-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:22px;height:1.5px;background:#fff;transition:background 0.3s}
+#nav.scrolled .hamburger span{background:var(--navy)}
+.mob-menu{
+  display:none;position:fixed;top:68px;left:0;right:0;
+  background:var(--surface);border-bottom:1px solid var(--border);
+  padding:20px 5vw 28px;z-index:199;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+.mob-menu.open{display:flex;flex-direction:column;gap:16px}
+.mob-menu a{color:var(--muted);text-decoration:none;font-size:15px;padding:6px 0;border-bottom:1px solid var(--border)}
+.mob-menu a:hover{color:var(--navy)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  background:var(--navy);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:120px 5vw 80px;
+  position:relative;overflow:hidden;
+}
+/* subtle grid pattern on navy */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,rgba(0,0,0,0.6) 20%,transparent 100%);
+}
+.hero-glow{
+  position:absolute;pointer-events:none;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(6,182,212,0.12) 0%,transparent 70%);
+  top:-200px;right:-100px;
+}
+.hero-glow2{
+  position:absolute;pointer-events:none;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%);
+  bottom:-100px;left:5vw;
+}
+.hero-inner{position:relative;z-index:1;max-width:860px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:500;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.12em;text-transform:uppercase;
+  margin-bottom:32px;
+  opacity:0;animation:fadeUp 0.8s 0.2s ease forwards;
+}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(52px,7.5vw,100px);
+  font-weight:900;
+  line-height:0.97;
+  letter-spacing:-0.03em;
+  color:#fff;
+  margin-bottom:32px;
+  opacity:0;animation:fadeUp 0.8s 0.42s ease forwards;
+}
+.hero-h1 em{color:var(--gold);font-style:italic}
+.hero-p{
+  font-size:clamp(15px,1.8vw,19px);
+  color:rgba(255,255,255,0.6);
+  max-width:520px;
+  line-height:1.8;
+  margin-bottom:48px;
+  opacity:0;animation:fadeUp 0.8s 0.6s ease forwards;
+}
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+  opacity:0;animation:fadeUp 0.8s 0.76s ease forwards;
+}
+.btn-gold{
+  background:var(--gold);color:var(--navy-deep);
+  padding:14px 32px;border-radius:10px;
+  font-size:14px;font-weight:600;
+  text-decoration:none;transition:all 0.2s;
+  display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;
+}
+.btn-gold:hover{background:#d4b05a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.35)}
+.btn-light{
+  background:rgba(255,255,255,0.1);color:#fff;
+  padding:14px 32px;border-radius:10px;
+  font-size:14px;font-weight:500;
+  border:1px solid rgba(255,255,255,0.25);
+  text-decoration:none;transition:all 0.2s;
+  display:inline-flex;align-items:center;gap:8px;
+  backdrop-filter:blur(8px);
+}
+.btn-light:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.4)}
+.hero-scroll{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fadeUp 0.8s 1.1s ease forwards;
+}
+.hero-scroll span{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.12em;text-transform:uppercase}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:scrollpulse 1.9s ease-in-out infinite}
+
+/* ── STAT BAR ── */
+.statbar{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat{padding:40px 5vw;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-v{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:8px}
+.stat-l{font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
+
+/* ── SHARED ── */
+section{padding:96px 5vw;position:relative}
+.tag{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:var(--navy);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:18px}
+.tag-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;background:var(--gold)}
+.sh2{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);font-weight:900;line-height:1.08;letter-spacing:-0.025em;color:var(--navy);margin-bottom:20px}
+.sh2 em{color:var(--gold);font-style:italic}
+.sp{font-size:17px;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:44px}
+
+/* ── ABOUT ── */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.pillar-list{display:flex;flex-direction:column;gap:1px}
+.pillar{
+  display:flex;gap:20px;
+  padding:20px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-left:3px solid transparent;
+  transition:all 0.2s;
+  margin-bottom:4px;
+  border-radius:10px;
+}
+.pillar:hover{border-left-color:var(--gold);box-shadow:0 4px 16px rgba(26,58,92,0.07)}
+.pillar-n{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:0.1em;padding-top:2px;flex-shrink:0}
+.pillar-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px}
+.pillar-b{font-size:13px;color:var(--muted);line-height:1.65}
+/* holding card */
+.holding-wrap{position:sticky;top:90px}
+.holding-card{
+  background:var(--navy);border-radius:16px;
+  padding:32px;margin-bottom:16px;
+  box-shadow:0 8px 32px rgba(26,58,92,0.25);
+}
+.holding-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.holding-hex{
+  width:44px;height:44px;flex-shrink:0;
+  background:var(--gold);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;align-items:center;justify-content:center;
+}
+.holding-hex span{font-family:'Syne',sans-serif;font-size:9px;font-weight:800;color:var(--navy-deep);letter-spacing:0.02em}
+.holding-nm{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff}
+.holding-sub-lbl{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-top:2px}
+.holding-body-txt{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px}
+.div-pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill-teal{background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.3);color:#67e8f9;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
+.pill-red{background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.3);color:#fca5a5;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
+.div-mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dmc{
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s;
+}
+.dmc:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,58,92,0.1)}
+.dmc-ic{
+  width:36px;height:36px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:12px;
+}
+.dmc-ic-teal{background:var(--teal-light);border:1px solid rgba(6,182,212,0.2)}
+.dmc-ic-red{background:var(--red-light);border:1px solid rgba(230,57,70,0.2)}
+.dmc-t{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.dmc-b{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* ── DIVISIONS ── */
+.divisions{background:var(--surface)}
+.div-intro{text-align:center;margin-bottom:64px}
+.div-intro .sp{margin:0 auto}
+.div-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.div-card{
+  border-radius:16px;overflow:hidden;
+  border:1px solid var(--border);
+  text-decoration:none;color:inherit;
+  display:block;position:relative;
+  transition:all 0.3s;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.div-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,58,92,0.12)}
+.div-card-top{padding:40px 40px 32px;position:relative;overflow:hidden}
+.div-people-top{background:var(--navy)}
+.div-security-top{background:linear-gradient(135deg,#1a0a0d 0%,#2d0e14 100%)}
+.div-card-body{padding:32px 40px 36px;background:var(--surface)}
+.div-idx{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:28px;display:block;opacity:0.7}
+.div-people .div-idx{color:rgba(103,232,249,0.9)}
+.div-security .div-idx{color:rgba(252,165,165,0.9)}
+.div-icon-wrap{
+  width:56px;height:56px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:24px;
+}
+.div-people .div-icon-wrap{background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.25)}
+.div-security .div-icon-wrap{background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.25)}
+.div-title{font-family:'Playfair Display',serif;font-size:clamp(30px,3.5vw,46px);font-weight:900;line-height:1.05;color:#fff;margin-bottom:14px;letter-spacing:-0.02em}
+.div-tagline{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.7;max-width:340px}
+.div-feats{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.div-feat{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.div-feat-tick{
+  width:18px;height:18px;border-radius:5px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.div-people-tick{background:var(--teal-light)}
+.div-security-tick{background:var(--red-light)}
+.div-link-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;
+  padding:10px 20px;border-radius:8px;
+  transition:all 0.2s;
+}
+.div-people .div-link-btn{background:var(--teal-light);color:var(--teal-dark)}
+.div-people .div-link-btn:hover{background:rgba(6,182,212,0.2)}
+.div-security .div-link-btn{background:var(--red-light);color:var(--red-dark)}
+.div-security .div-link-btn:hover{background:rgba(230,57,70,0.15)}
+/* background orb on card top */
+.div-orb{position:absolute;border-radius:50%;pointer-events:none;opacity:0.12}
+.div-people-orb{width:300px;height:300px;background:radial-gradient(circle,var(--teal),transparent 70%);top:-80px;right:-60px}
+.div-security-orb{width:300px;height:300px;background:radial-gradient(circle,var(--red),transparent 70%);bottom:-80px;left:-60px}
+
+/* ── NIMBA PEOPLE DETAIL ── */
+.np-section{background:var(--bg)}
+.feat-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin:56px 0 48px;
+}
+.feat-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:28px 24px;transition:all 0.2s;
+}
+.feat-card:hover{border-color:rgba(6,182,212,0.25);box-shadow:0 6px 20px rgba(26,58,92,0.08);transform:translateY(-2px)}
+.feat-ic{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--teal-light);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+}
+.feat-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.feat-b{font-size:13px;color:var(--muted);line-height:1.7}
+.np-cta{
+  padding:40px 44px;
+  background:var(--navy);border-radius:16px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  box-shadow:0 8px 32px rgba(26,58,92,0.2);
+}
+.np-cta h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
+.np-cta p{font-size:14px;color:rgba(255,255,255,0.55)}
+.btn-teal{
+  background:var(--teal);color:#fff;padding:13px 28px;border-radius:10px;
+  font-size:14px;font-weight:600;text-decoration:none;
+  transition:all 0.2s;white-space:nowrap;flex-shrink:0;
+}
+.btn-teal:hover{filter:brightness(1.1);transform:translateY(-1px)}
+
+/* ── NIMBA SECURITY DETAIL ── */
+.ns-section{background:var(--surface)}
+.ns-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.offering{
+  background:var(--bg);border:1px solid var(--border);border-radius:12px;
+  padding:22px 24px;margin-bottom:12px;transition:all 0.2s;
+}
+.offering:hover{border-color:rgba(230,57,70,0.25);box-shadow:0 4px 16px rgba(230,57,70,0.07)}
+.offering-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px}
+.offering-t{font-size:15px;font-weight:600;color:var(--navy)}
+.badge{
+  font-size:11px;font-weight:600;color:var(--red-dark);
+  background:var(--red-light);padding:3px 10px;border-radius:20px;
+  letter-spacing:0.04em;
+}
+.offering-b{font-size:13px;color:var(--muted);line-height:1.65}
+/* pentest steps */
+.pentest-wrap{background:var(--bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:4px}
+.pentest-hdr{
+  padding:20px 24px;border-bottom:1px solid var(--border);
+  background:var(--navy);
+}
+.pentest-hdr-lbl{font-size:11px;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px}
+.pentest-hdr-t{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff}
+.psteps{}
+.pstep{display:flex;gap:18px;padding:16px 24px;border-bottom:1px solid var(--border);transition:background 0.2s}
+.pstep:last-child{border-bottom:none}
+.pstep:hover{background:var(--surface)}
+.pstep-n{
+  width:26px;height:26px;border-radius:8px;flex-shrink:0;
+  background:var(--red-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:var(--red-dark);margin-top:1px;
+}
+.pstep-t{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px}
+.pstep-b{font-size:13px;color:var(--muted);line-height:1.6}
+.ns-cta{
+  margin-top:20px;padding:28px;
+  background:var(--red-light);border:1px solid rgba(230,57,70,0.2);border-radius:14px;
+}
+.ns-cta h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.ns-cta p{font-size:14px;color:var(--muted);margin-bottom:18px;line-height:1.7}
+.btn-red{
+  background:var(--red);color:#fff;
+  padding:11px 26px;border-radius:10px;
+  font-size:13px;font-weight:600;text-decoration:none;
+  display:inline-block;transition:all 0.2s;
+}
+.btn-red:hover{filter:brightness(1.1);transform:translateY(-1px)}
+
+/* ── WHY ── */
+.why{background:var(--bg)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
+.why-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:30px 26px;transition:all 0.2s;
+}
+.why-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,58,92,0.09);border-color:rgba(201,168,76,0.25)}
+.why-ic{
+  width:42px;height:42px;border-radius:10px;
+  background:var(--navy-light);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.why-t{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.why-b{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ── CONTACT ── */
+.contact{background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+.c-items{display:flex;flex-direction:column;gap:20px;margin-bottom:36px}
+.c-item{display:flex;align-items:flex-start;gap:16px;padding:18px;background:var(--bg);border:1px solid var(--border);border-radius:12px;transition:all 0.2s}
+.c-item:hover{border-color:rgba(26,58,92,0.2);box-shadow:0 2px 12px rgba(26,58,92,0.06)}
+.c-ic{
+  width:40px;height:40px;border-radius:10px;flex-shrink:0;
+  background:var(--navy-light);
+  display:flex;align-items:center;justify-content:center;
+}
+.c-lbl{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px}
+.c-val{font-size:15px;color:var(--navy)}
+.c-val a{color:var(--navy);text-decoration:none}
+.c-val a:hover{color:var(--gold-dark)}
+.cdivs{padding-top:24px;border-top:1px solid var(--border)}
+.cdivs-lbl{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.cdiv-link{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border);transition:color 0.2s}
+.cdiv-link:last-child{border-bottom:none}
+.cdiv-link:hover{color:var(--navy)}
+.cdot{width:8px;height:8px;border-radius:50%}
+/* form */
+.form{display:flex;flex-direction:column;gap:14px;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:32px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase}
+.field input,.field select,.field textarea{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:11px 14px;color:var(--text);
+  font-family:'Inter',sans-serif;font-size:14px;
+  outline:none;transition:all 0.2s;width:100%;-webkit-appearance:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-light)}
+.field textarea{resize:vertical;min-height:100px}
+.field select option{background:var(--surface)}
+#form-ok{display:none;padding:12px 16px;background:#dcfce7;border:1px solid #86efac;border-radius:8px;font-size:14px;color:#166534}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:64px 5vw 36px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px}
+.foot-about{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;margin-top:14px;max-width:260px}
+.foot-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.foot-col ul li a:hover{color:var(--gold)}
+.foot-bottom{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);
+  font-size:13px;color:rgba(255,255,255,0.35);
+}
+.foot-bottom a{color:rgba(255,255,255,0.35);text-decoration:none}
+.foot-bottom a:hover{color:var(--gold)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+@keyframes scrollpulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.3;transform:scaleY(0.5)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ── MOBILE ── */
+@media(max-width:960px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .about-grid,.ns-grid,.contact-grid,.foot-grid{grid-template-columns:1fr}
+  .div-grid{grid-template-columns:1fr}
+  .feat-grid,.why-grid{grid-template-columns:1fr 1fr}
+  .statbar{grid-template-columns:1fr 1fr}
+  .stat{border-bottom:1px solid var(--border)}
+  .hero-scroll{display:none}
+  .div-mini-cards{grid-template-columns:1fr}
+  .holding-wrap{position:static}
+  .frow{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .feat-grid,.why-grid{grid-template-columns:1fr}
+  .np-cta{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo">
+    <div class="nav-hex"><span>DNH</span></div>
+    <span class="nav-name nav-name-hero">DithaNimba Holdings</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#divisions">Divisions</a>
+    <a href="#nimba-people">Nimba People</a>
+    <a href="#nimba-security">Nimba Security</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+  <div class="hamburger" onclick="toggleMenu()" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mob"><a href="#about" onclick="closeMob()">About</a><a href="#divisions" onclick="closeMob()">Divisions</a><a href="#nimba-people" onclick="closeMob()">Nimba People</a><a href="#nimba-security" onclick="closeMob()">Nimba Security</a><a href="#contact" onclick="closeMob()">Contact</a></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="hero-dot"></span>DithaNimba Holdings &nbsp;·&nbsp; Johannesburg, South Africa</div>
+    <h1 class="hero-h1">Building Africa's<br/><em>Digital Future</em><br/>One System at a Time.</h1>
+    <p class="hero-p">A South African technology holding company developing specialist HR, payroll and cybersecurity solutions for forward-thinking businesses.</p>
+    <div class="hero-btns">
+      <a href="#divisions" class="btn-gold">Explore Divisions <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#contact" class="btn-light">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- STAT BAR -->
+<div class="statbar">
+  <div class="stat reveal"><div class="stat-v">2</div><div class="stat-l">Specialist Divisions</div></div>
+  <div class="stat reveal"><div class="stat-v">SA</div><div class="stat-l">Built Locally</div></div>
+  <div class="stat reveal"><div class="stat-v">24h</div><div class="stat-l">Deployment</div></div>
+  <div class="stat reveal"><div class="stat-v">100%</div><div class="stat-l">Cloud-Native</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="tag reveal"><span class="tag-dot"></span>Who We Are</div>
+      <h2 class="sh2 reveal">A holding company<br/>built on <em>purpose.</em></h2>
+      <p class="sp reveal">DithaNimba Holdings is a South African technology holding company building specialist digital divisions that solve real operational challenges for SA businesses.</p>
+      <div class="pillar-list reveal">
+        <div class="pillar"><span class="pillar-n">01</span><div><div class="pillar-t">SA-First Design</div><div class="pillar-b">PAYE, UIF and BCEA compliance built into every product from day one — not bolted on as afterthoughts.</div></div></div>
+        <div class="pillar"><span class="pillar-n">02</span><div><div class="pillar-t">Cloud-Native Architecture</div><div class="pillar-b">All solutions are internet-native — accessible from any device, anywhere, with enterprise-grade security standards.</div></div></div>
+        <div class="pillar"><span class="pillar-n">03</span><div><div class="pillar-t">Reseller Partner Network</div><div class="pillar-b">We work with authorised resellers to scale solutions nationally while protecting IP and maintaining quality.</div></div></div>
+        <div class="pillar"><span class="pillar-n">04</span><div><div class="pillar-t">Security by Default</div><div class="pillar-b">No system goes live without a penetration test. Our security division hardens every deployment from day one.</div></div></div>
+      </div>
+    </div>
+
+    <div class="holding-wrap reveal">
+      <div class="holding-card">
+        <div class="holding-head">
+          <div class="holding-hex"><span>DNH</span></div>
+          <div>
+            <div class="holding-nm">DithaNimba Holdings</div>
+            <div class="holding-sub-lbl">Parent Company</div>
+          </div>
+        </div>
+        <div class="holding-body-txt">Technology holding company driving digital transformation across South Africa through specialist, locally-designed technology divisions.</div>
+        <div class="div-pills">
+          <span class="pill-teal">Nimba People</span>
+          <span class="pill-red">Nimba Security</span>
+        </div>
+      </div>
+      <div class="div-mini-cards">
+        <div class="dmc">
+          <div class="dmc-ic dmc-ic-teal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
+          <div class="dmc-t">Nimba People</div>
+          <div class="dmc-b">HR &amp; ERP platform for SA businesses</div>
+        </div>
+        <div class="dmc">
+          <div class="dmc-ic dmc-ic-red"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="dmc-t">Nimba Security</div>
+          <div class="dmc-b">Cybersecurity training &amp; pentesting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVISIONS -->
+<section class="divisions" id="divisions">
+  <div class="div-intro">
+    <div class="tag reveal" style="justify-content:center"><span class="tag-dot"></span>Our Divisions</div>
+    <h2 class="sh2 reveal">Two focused divisions.<br/><em>One holding company.</em></h2>
+    <p class="sp reveal">Each division addresses a distinct, high-value problem in the South African business landscape.</p>
+  </div>
+
+  <div class="div-grid reveal">
+    <!-- Nimba People -->
+    <a href="#nimba-people" class="div-card div-people">
+      <div class="div-card-top div-people-top">
+        <div class="div-orb div-people-orb"></div>
+        <span class="div-idx">01 / HR &amp; ERP Solutions</span>
+        <div class="div-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3 class="div-title">Nimba People</h3>
+        <p class="div-tagline">Cloud-based HR and payroll management built for South African businesses — PAYE, UIF, leave management and employee tracking in one professional system.</p>
+      </div>
+      <div class="div-card-body">
+        <div class="div-feats">
+          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Employee &amp; Profile Management</div>
+          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>SA Payroll with PAYE &amp; UIF</div>
+          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Leave Request &amp; Approval Workflow</div>
+          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Digital Payslips &amp; Analytics Dashboard</div>
+          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Role-Based Access — Admin &amp; Employee</div>
+        </div>
+        <span class="div-link-btn">Explore Nimba People <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Nimba Security -->
+    <a href="#nimba-security" class="div-card div-security">
+      <div class="div-card-top div-security-top">
+        <div class="div-orb div-security-orb"></div>
+        <span class="div-idx">02 / Cybersecurity Services</span>
+        <div class="div-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fca5a5" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="div-title">Nimba Security</h3>
+        <p class="div-tagline">Cybersecurity awareness training and penetration testing — protecting SA businesses as they migrate ERP and HR systems to the cloud.</p>
+      </div>
+      <div class="div-card-body">
+        <div class="div-feats">
+          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Staff Security Awareness Training</div>
+          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Social Engineering &amp; Phishing Defence</div>
+          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pre-Handover Penetration Testing</div>
+          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Vulnerability Reports &amp; Remediation</div>
+          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Phishing Simulation Campaigns</div>
+        </div>
+        <span class="div-link-btn">Explore Nimba Security <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- NIMBA PEOPLE -->
+<section class="np-section" id="nimba-people">
+  <div class="tag reveal" style="color:var(--teal-dark)"><span style="width:8px;height:8px;background:var(--teal);border-radius:2px;flex-shrink:0"></span>Nimba People · ERP &amp; HR Solutions</div>
+  <h2 class="sh2 reveal">Your complete HR system,<br/><em>live in 24 hours.</em></h2>
+  <p class="sp reveal">Nimba People replaces spreadsheets, WhatsApp leave requests and manual payroll with one clean, professional cloud platform — accessible from any phone or laptop.</p>
+
+  <div class="feat-grid reveal">
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feat-t">Employee Management</div><div class="feat-b">Full employee profiles, departments, roles and employment history — searchable in real time.</div></div>
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="feat-t">SA Payroll Engine</div><div class="feat-b">Automated PAYE and UIF calculations using current SA tax tables. PDF payslips generated on demand.</div></div>
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="feat-t">Leave Management</div><div class="feat-b">Employees submit leave digitally. HR approves with one click. Status syncs in real-time across all devices.</div></div>
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="feat-t">Analytics Dashboard</div><div class="feat-b">Workforce insights, department breakdowns, salary averages and leave trends in one executive view.</div></div>
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="feat-t">Works on Any Device</div><div class="feat-b">Fully mobile-responsive. HR manages from desktop, employees use their phones — no app needed.</div></div>
+    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div><div class="feat-t">Employee Onboarding</div><div class="feat-b">Invite staff by email — they're automatically linked to their HR profile. Zero manual setup required.</div></div>
+  </div>
+
+  <div class="np-cta reveal">
+    <div><h3>See Nimba People in action</h3><p>Interactive demo — no sign-up required. Try all features as HR Admin or Employee.</p></div>
+    <a href="https://nimba-people-demo.netlify.app" target="_blank" class="btn-teal">View Live Demo →</a>
+  </div>
+</section>
+
+<!-- NIMBA SECURITY -->
+<section class="ns-section" id="nimba-security">
+  <div class="ns-grid">
+    <div>
+      <div class="tag reveal" style="color:var(--red-dark)"><span style="width:8px;height:8px;background:var(--red);border-radius:2px;flex-shrink:0"></span>Nimba Security · Cybersecurity Services</div>
+      <h2 class="sh2 reveal">Secure your people<br/><em>before attackers do.</em></h2>
+      <p class="sp reveal">As SA businesses move ERP and HR systems to the cloud, the attack surface grows. Nimba Security closes that gap through training, simulation and rigorous testing — bundled with every Nimba People deployment.</p>
+
+      <div class="reveal">
+        <div class="offering"><div class="offering-head"><div class="offering-t">Security Awareness Training</div><span class="badge">Core Service</span></div><div class="offering-b">Hands-on training covering social engineering, phishing, BEC fraud and SA-specific threats like SARS scams, WhatsApp OTP hijacking and fake supplier banking details.</div></div>
+        <div class="offering"><div class="offering-head"><div class="offering-t">Penetration Testing</div><span class="badge">Pre-Handover</span></div><div class="offering-b">Full pentest before go-live. We find vulnerabilities, exploit them safely, fix critical issues and issue a signed remediation certificate before handover.</div></div>
+        <div class="offering"><div class="offering-head"><div class="offering-t">Phishing Simulation</div><span class="badge">Assessment</span></div><div class="offering-b">Simulated phishing campaigns sent to your staff — click rates reported by department to drive targeted, no-blame awareness training.</div></div>
+        <div class="offering"><div class="offering-head"><div class="offering-t">Ongoing Monitoring</div><span class="badge">Retainer</span></div><div class="offering-b">Post-deployment monitoring, quarterly training refreshers, patch guidance and incident response support for continued protection.</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="pentest-wrap reveal">
+        <div class="pentest-hdr">
+          <div class="pentest-hdr-lbl">Our Process</div>
+          <div class="pentest-hdr-t">The 5-Phase Pentest</div>
+        </div>
+        <div class="psteps">
+          <div class="pstep"><div class="pstep-n">01</div><div><div class="pstep-t">Reconnaissance</div><div class="pstep-b">Map attack surface, exposed subdomains, services and employee data available online.</div></div></div>
+          <div class="pstep"><div class="pstep-n">02</div><div><div class="pstep-t">Scanning</div><div class="pstep-b">Vulnerability scanning of all internet-facing ports, APIs and authentication endpoints.</div></div></div>
+          <div class="pstep"><div class="pstep-n">03</div><div><div class="pstep-t">Exploitation</div><div class="pstep-b">Controlled exploitation — credential attacks, injection vulnerabilities, session hijacking.</div></div></div>
+          <div class="pstep"><div class="pstep-n">04</div><div><div class="pstep-t">Social Engineering Test</div><div class="pstep-b">Simulated phishing sent to staff. Click rate measured by department. No blame, only awareness.</div></div></div>
+          <div class="pstep"><div class="pstep-n">05</div><div><div class="pstep-t">Report &amp; Remediate</div><div class="pstep-b">Full findings report. Critical issues fixed. Signed certificate issued before handover.</div></div></div>
+        </div>
+      </div>
+      <div class="ns-cta reveal">
+        <h3>No ERP goes live without a pentest.</h3>
+        <p>Every Nimba People deployment includes a Nimba Security assessment. We attack your system before criminals do — and fix what we find.</p>
+        <a href="#contact" class="btn-red">Request an Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div style="text-align:center;max-width:560px;margin:0 auto">
+    <div class="tag reveal" style="justify-content:center"><span class="tag-dot"></span>Why DithaNimba</div>
+    <h2 class="sh2 reveal" style="text-align:center">Built for South Africa.<br/><em>No compromises.</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="why-t">SA Labour Law Built In</div><div class="why-b">PAYE, UIF and BCEA compliance baked into every product from day one — not bolted on later.</div></div>
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="why-t">24-Hour Deployment</div><div class="why-b">We handle everything — setup, configuration, staff onboarding and training. Live within one business day.</div></div>
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><div class="why-t">Security Before Handover</div><div class="why-b">Every HR deployment includes a cybersecurity assessment. No system goes live with known vulnerabilities.</div></div>
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div><div class="why-t">Works From Any Device</div><div class="why-b">Cloud-native — your team accesses everything from their phones anywhere, no VPN or office required.</div></div>
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="why-t">Reseller Partner Network</div><div class="why-b">Our reseller programme lets local entrepreneurs sell and earn — we handle all technical deployment.</div></div>
+    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.73a16 16 0 006.18 6.18l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.01z"/></svg></div><div class="why-t">Real Ongoing Support</div><div class="why-b">Monthly and annual support plans keep systems updated and secure — with a real person to call.</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="tag reveal"><span class="tag-dot"></span>Get In Touch</div>
+      <h2 class="sh2 reveal">Let's build something<br/><em>together.</em></h2>
+      <p class="sp reveal">Whether you need HR software, a cybersecurity assessment, or want to become a reseller partner — we'd love to hear from you.</p>
+
+      <div class="c-items reveal">
+        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:mondliwes@gmail.com">mondliwes@gmail.com</a></div></div></div>
+        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="c-lbl">Location</div><div class="c-val">Johannesburg, South Africa</div></div></div>
+        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><div class="c-lbl">Website</div><div class="c-val"><a href="https://dithanimbaholdings.co.za">dithanimbaholdings.co.za</a></div></div></div>
+      </div>
+
+      <div class="cdivs reveal">
+        <div class="cdivs-lbl">Our Divisions</div>
+        <a href="#nimba-people" class="cdiv-link"><span class="cdot" style="background:var(--teal)"></span>Nimba People — HR &amp; ERP Solutions</a>
+        <a href="#nimba-security" class="cdiv-link"><span class="cdot" style="background:var(--red)"></span>Nimba Security — Cybersecurity Services</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form class="form" onsubmit="submitForm(event)">
+        <div class="frow">
+          <div class="field"><label>First Name</label><input type="text" placeholder="Mondli" required/></div>
+          <div class="field"><label>Last Name</label><input type="text" placeholder="Maphumulo" required/></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" placeholder="you@company.co.za" required/></div>
+        <div class="field"><label>Company</label><input type="text" placeholder="Your Company Name"/></div>
+        <div class="field">
+          <label>I'm Interested In</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Nimba People — HR &amp; ERP System</option>
+            <option>Nimba Security — Awareness Training</option>
+            <option>Nimba Security — Penetration Testing</option>
+            <option>Becoming a Reseller Partner</option>
+            <option>Full Bundle (People + Security)</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="field"><label>Message</label><textarea placeholder="Tell us about your business and what you're looking for..."></textarea></div>
+        <button type="submit" class="btn-gold">Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <div id="form-ok">✓ Message sent. We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a href="#home" class="nav-logo">
+        <div class="nav-hex"><span>DNH</span></div>
+        <span class="nav-name" style="color:#fff">DithaNimba Holdings</span>
+      </a>
+      <p class="foot-about">Building South Africa's digital infrastructure through specialist technology divisions — one business at a time.</p>
+    </div>
+    <div class="foot-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#divisions">Divisions</a></li><li><a href="#why">Why DithaNimba</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="foot-col"><h4>Nimba People</h4><ul><li><a href="#nimba-people">Features</a></li><li><a href="https://nimba-people-demo.netlify.app" target="_blank">Live Demo</a></li><li><a href="#contact">Reseller Programme</a></li><li><a href="#contact">Pricing</a></li></ul></div>
+    <div class="foot-col"><h4>Nimba Security</h4><ul><li><a href="#nimba-security">Services</a></li><li><a href="#nimba-security">Pentest Process</a></li><li><a href="#nimba-security">Training</a></li><li><a href="#contact">Book Assessment</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025 DithaNimba Holdings. All rights reserved.</span>
+    <span>Johannesburg, South Africa &nbsp;·&nbsp; <a href="mailto:mondliwes@gmail.com">mondliwes@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -24px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+  el.style.transitionDelay = (siblings.indexOf(el) * 0.08) + 's';
+  obs.observe(el);
+});
+
+function toggleMenu(){document.getElementById('mob').classList.toggle('open')}
+function closeMob(){document.getElementById('mob').classList.remove('open')}
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+function submitForm(e){
+  e.preventDefault();
+  const ok = document.getElementById('form-ok');
+  ok.style.display = 'block';
+  e.target.reset();
+  setTimeout(() => ok.style.display = 'none', 5000);
+}
+</script>
+</body>
+</html>
