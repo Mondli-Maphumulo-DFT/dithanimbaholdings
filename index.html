@@ -7,13 +7,13 @@
 <meta name="theme-color" content="#1a3a5c"/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:title" content="DithaNimba Holdings"/>
-<meta property="og:description" content="South African technology holding company — Nimba People (HR & ERP) and Nimba Security (Cybersecurity)."/>
+<meta property="og:description" content="South African technology holding company — Nimba People (HR & ERP), Nimba Security (Cybersecurity) and Nimba Logistics (Logistics Consulting)."/>
 <meta property="og:url" content="https://dithanimbaholdings.co.za"/>
 <meta property="og:type" content="website"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a3a5c'/%3E%3Cg transform='translate(5,7)'%3E%3Crect x='1' y='4' width='20' height='14' rx='2' fill='none' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M14 4V3a2 2 0 00-2-2h-4a2 2 0 00-2 2v1' fill='none' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 11h20' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"/>
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%231a3a5c'/%3E%3Cg transform='translate(28,38)'%3E%3Crect x='4' y='22' width='116' height='80' rx='10' fill='none' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M78 22V16a10 10 0 00-10-10H56a10 10 0 00-10 10v6' fill='none' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M4 62h116' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"/>
 <link rel="canonical" href="https://dithanimbaholdings.co.za"/>
-<meta name="description" content="DithaNimba Holdings — home of Nimba People (HR & ERP) and Nimba Security (Cybersecurity). South African technology holding company."/>
+<meta name="description" content="DithaNimba Holdings — home of Nimba People (HR & ERP), Nimba Security (Cybersecurity) and Nimba Logistics (Logistics Consulting). South African technology holding company."/>
 <style>
 .hero-h1{font-family:Georgia,'Times New Roman',serif;font-weight:700}
 .hero-h1 em{font-style:italic}
@@ -302,7 +302,7 @@ section{padding:96px 5vw;position:relative}
 .divisions{background:var(--surface);content-visibility:auto;contain-intrinsic-size:0 700px}
 .div-intro{text-align:center;margin-bottom:64px}
 .div-intro .sp{margin:0 auto}
-.div-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .div-card{
   border-radius:16px;overflow:hidden;
   border:1px solid var(--border);
@@ -489,9 +489,28 @@ section{padding:96px 5vw;position:relative}
 .field select option{background:var(--surface)}
 #form-ok{display:none;padding:12px 16px;background:#dcfce7;border:1px solid #86efac;border-radius:8px;font-size:14px;color:#166534}
 
+/* ── NIMBA LOGISTICS (gold accent) ── */
+.div-logistics-top{background:linear-gradient(135deg,#2a2410 0%,#3d3416 100%)}
+.div-logistics .div-idx{color:rgba(201,168,76,0.95)}
+.div-logistics .div-icon-wrap{background:rgba(201,168,76,0.16);border:1px solid rgba(201,168,76,0.3)}
+.div-logistics-orb{width:300px;height:300px;background:radial-gradient(circle,var(--gold),transparent 70%);top:-80px;right:-60px}
+.div-logistics-tick{background:var(--gold-light)}
+.div-logistics .div-link-btn{background:var(--gold-light);color:var(--gold-dark)}
+.div-logistics .div-link-btn:hover{background:rgba(201,168,76,0.22)}
+.pill-gold{background:rgba(201,168,76,0.16);border:1px solid rgba(201,168,76,0.32);color:#d4b05a;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
+.dmc-ic-gold{background:var(--gold-light);border:1px solid rgba(201,168,76,0.25)}
+.nl-section{background:var(--bg);content-visibility:auto;contain-intrinsic-size:0 700px}
+.feat-logistics .feat-ic{background:var(--gold-light)}
+.feat-logistics:hover{border-color:rgba(201,168,76,0.25)}
+.nl-cta{margin-top:8px;padding:40px 44px;background:var(--navy);border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 8px 32px rgba(26,58,92,0.2)}
+.nl-cta h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
+.nl-cta p{font-size:14px;color:rgba(255,255,255,0.55)}
+.btn-goldcta{background:var(--gold);color:var(--navy-deep);padding:13px 28px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s;white-space:nowrap;flex-shrink:0}
+.btn-goldcta:hover{background:#d4b05a;transform:translateY(-1px)}
+
 /* ── FOOTER ── */
 footer{background:var(--navy);padding:64px 5vw 36px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
 .foot-about{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:14px;max-width:260px}
 .foot-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -543,6 +562,10 @@ footer{background:var(--navy);padding:64px 5vw 36px}
   50%{box-shadow:0 4px 32px rgba(37,211,102,0.65)}
 }
 /* ── MOBILE ── */
+@media(max-width:1100px){
+  .foot-grid{grid-template-columns:1fr 1fr 1fr}
+  .div-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:960px){
   .nav-links,
 .nav-login{
@@ -604,6 +627,11 @@ footer{background:var(--navy);padding:64px 5vw 36px}
         "@type": "Offer",
         "name": "Nimba Security — Cybersecurity",
         "url": "https://dithanimbaholdings.co.za/#nimba-security"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nimba Logistics — Logistics Consulting",
+        "url": "https://dithanimbaholdings.co.za/#nimba-logistics"
       }
     ]
   }
@@ -624,6 +652,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
     <a href="#divisions">Divisions</a>
     <a href="#nimba-people">Nimba People</a>
     <a href="#nimba-security">Nimba Security</a>
+    <a href="#nimba-logistics">Nimba Logistics</a>
     <a href="#contact">Contact</a>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
@@ -632,7 +661,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
   </div>
   <button class="hamburger" onclick="toggleMenu()" id="hbg" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
-<nav class="mob-menu" aria-label="Mobile navigation" id="mob"><a href="#about" onclick="closeMob()" aria-label="Close menu">About</a><a href="#divisions" onclick="closeMob()">Divisions</a><a href="#nimba-people" onclick="closeMob()">Nimba People</a><a href="#nimba-security" onclick="closeMob()">Nimba Security</a><a href="#contact" onclick="closeMob()">Contact</a>  <a href="https://people.dithanimbaholdings.co.za" target="_blank" onclick="closeMob()" style="color:var(--gold-dark);font-weight:600">Client Login →</a>
+<nav class="mob-menu" aria-label="Mobile navigation" id="mob"><a href="#about" onclick="closeMob()" aria-label="Close menu">About</a><a href="#divisions" onclick="closeMob()">Divisions</a><a href="#nimba-people" onclick="closeMob()">Nimba People</a><a href="#nimba-security" onclick="closeMob()">Nimba Security</a><a href="#nimba-logistics" onclick="closeMob()">Nimba Logistics</a><a href="#contact" onclick="closeMob()">Contact</a>  <a href="https://people.dithanimbaholdings.co.za" target="_blank" onclick="closeMob()" style="color:var(--gold-dark);font-weight:600">Client Login →</a>
 </nav>
 
 <!-- HERO -->
@@ -643,7 +672,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
   <div class="hero-inner">
     <div class="hero-eyebrow"><span class="hero-dot"></span>DithaNimba Holdings &nbsp;·&nbsp; Johannesburg, South Africa</div>
     <h1 class="hero-h1">Building Africa's<br/><em>Digital Future</em><br/>One System at a Time.</h1>
-    <p class="hero-p">A South African technology holding company developing specialist HR, payroll and cybersecurity solutions for forward-thinking businesses.</p>
+    <p class="hero-p">A South African technology holding company developing specialist HR, payroll, cybersecurity and logistics solutions for forward-thinking businesses.</p>
     <div class="hero-btns">
       <a href="#divisions" class="btn-gold">Explore Divisions <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#contact" class="btn-light">Get in Touch</a>
@@ -655,7 +684,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
 
 <!-- STAT BAR -->
 <div class="statbar">
-  <div class="stat reveal"><div class="stat-v">2</div><div class="stat-l">Specialist Divisions</div></div>
+  <div class="stat reveal"><div class="stat-v">3</div><div class="stat-l">Specialist Divisions</div></div>
   <div class="stat reveal"><div class="stat-v">SA</div><div class="stat-l">Built Locally</div></div>
   <div class="stat reveal"><div class="stat-v">24h</div><div class="stat-l">Deployment</div></div>
   <div class="stat reveal"><div class="stat-v">100%</div><div class="stat-l">Cloud-Native</div></div>
@@ -689,6 +718,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
         <div class="div-pills">
           <span class="pill-teal">Nimba People</span>
           <span class="pill-red">Nimba Security</span>
+          <span class="pill-gold">Nimba Logistics</span>
         </div>
       </div>
       <div class="div-mini-cards">
@@ -702,6 +732,11 @@ footer{background:var(--navy);padding:64px 5vw 36px}
           <div class="dmc-t">Nimba Security</div>
           <div class="dmc-b">Cybersecurity training &amp; pentesting</div>
         </div>
+        <div class="dmc">
+          <div class="dmc-ic dmc-ic-gold"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="dmc-t">Nimba Logistics</div>
+          <div class="dmc-b">Logistics &amp; supply chain consulting</div>
+        </div>
       </div>
     </div>
   </div>
@@ -711,7 +746,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
 <section class="divisions" id="divisions">
   <div class="div-intro">
     <div class="tag reveal" style="justify-content:center"><span class="tag-dot"></span>Our Divisions</div>
-    <h2 class="sh2 reveal">Two focused divisions.<br/><em>One holding company.</em></h2>
+    <h2 class="sh2 reveal">Three focused divisions.<br/><em>One holding company.</em></h2>
     <p class="sp reveal">Each division addresses a distinct, high-value problem in the South African business landscape.</p>
   </div>
 
@@ -759,6 +794,29 @@ footer{background:var(--navy);padding:64px 5vw 36px}
           <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Phishing Simulation Campaigns</div>
         </div>
         <span class="div-link-btn">Explore Nimba Security <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Nimba Logistics -->
+    <a href="#nimba-logistics" class="div-card div-logistics">
+      <div class="div-card-top div-logistics-top">
+        <div class="div-orb div-logistics-orb"></div>
+        <span class="div-idx">03 / Freight &amp; Logistics</span>
+        <div class="div-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4b05a" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 class="div-title">Nimba Logistics</h3>
+        <p class="div-tagline">Supply chain and logistics consulting for South African businesses — cutting freight costs, tightening routes and turning logistics into a competitive edge.</p>
+      </div>
+      <div class="div-card-body">
+        <div class="div-feats">
+          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Supply Chain Strategy &amp; Design</div>
+          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Route &amp; Network Optimisation</div>
+          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Freight Cost &amp; Tariff Analysis</div>
+          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Fleet Utilisation Reviews</div>
+          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Warehouse &amp; Distribution Planning</div>
+        </div>
+        <span class="div-link-btn">Explore Nimba Logistics <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
   </div>
@@ -824,6 +882,27 @@ footer{background:var(--navy);padding:64px 5vw 36px}
   </div>
 </section>
 
+<!-- NIMBA LOGISTICS -->
+<section class="nl-section" id="nimba-logistics">
+  <div class="tag reveal" style="color:var(--gold-dark)"><span style="width:8px;height:8px;background:var(--gold);border-radius:2px;flex-shrink:0"></span>Nimba Logistics · Freight &amp; Logistics Consulting</div>
+  <h2 class="sh2 reveal">Move smarter.<br/><em>Spend less.</em></h2>
+  <p class="sp reveal">Nimba Logistics brings structured supply chain expertise to SA businesses — exposing freight overspend, tightening routes and turning logistics from a cost centre into a competitive edge.</p>
+
+  <div class="feat-grid reveal">
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div class="feat-t">Supply Chain Strategy</div><div class="feat-b">End-to-end review of sourcing, storage and distribution — with a costed roadmap to leaner, more resilient operations.</div></div>
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 013 3v3M15 18H9a3 3 0 01-3-3V9"/></svg></div><div class="feat-t">Route Optimisation</div><div class="feat-b">Data-driven routing and load planning that cuts fuel, mileage and turnaround time across your fleet or carrier mix.</div></div>
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="feat-t">Freight Cost Analysis</div><div class="feat-b">Benchmark freight tariffs and carrier contracts to expose overspend and negotiate stronger rates.</div></div>
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="feat-t">Fleet Utilisation</div><div class="feat-b">Fleet and asset utilisation reviews that surface idle capacity, bottlenecks and quick operational wins.</div></div>
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21V12h6v9"/></svg></div><div class="feat-t">Warehouse &amp; Distribution</div><div class="feat-b">Network and distribution planning — siting, layout and flow design to move stock faster at lower cost.</div></div>
+    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div class="feat-t">SA-Context Advisory</div><div class="feat-b">Practical guidance grounded in South African road, border and freight realities — not generic theory.</div></div>
+  </div>
+
+  <div class="nl-cta reveal">
+    <div><h3>Turn logistics into leverage.</h3><p>Book a consultation and we'll map where your supply chain is leaking time and money.</p></div>
+    <a href="#contact" class="btn-goldcta">Request a Consultation →</a>
+  </div>
+</section>
+
 <!-- WHY -->
 <section class="why" id="why">
   <div style="text-align:center;max-width:560px;margin:0 auto">
@@ -846,7 +925,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
     <div>
       <div class="tag reveal"><span class="tag-dot"></span>Get In Touch</div>
       <h2 class="sh2 reveal">Let's build something<br/><em>together.</em></h2>
-      <p class="sp reveal">Whether you need HR software, a cybersecurity assessment, or want to become a reseller partner — we'd love to hear from you.</p>
+      <p class="sp reveal">Whether you need HR software, a cybersecurity assessment, logistics consulting, or want to become a reseller partner — we'd love to hear from you.</p>
 
       <div class="c-items reveal">
         <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a></div></div></div>
@@ -859,6 +938,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
         <div class="cdivs-lbl">Our Divisions</div>
         <a href="#nimba-people" class="cdiv-link"><span class="cdot" style="background:var(--teal)"></span>Nimba People — HR &amp; ERP Solutions</a>
         <a href="#nimba-security" class="cdiv-link"><span class="cdot" style="background:var(--red)"></span>Nimba Security — Cybersecurity Services</a>
+        <a href="#nimba-logistics" class="cdiv-link"><span class="cdot" style="background:var(--gold)"></span>Nimba Logistics — Freight &amp; Logistics Consulting</a>
       </div>
     </div>
 
@@ -877,6 +957,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
             <option>Nimba People — HR &amp; ERP System</option>
             <option>Nimba Security — Awareness Training</option>
             <option>Nimba Security — Penetration Testing</option>
+            <option>Nimba Logistics — Logistics Consulting</option>
             <option>Becoming a Reseller Partner</option>
             <option>Full Bundle (People + Security)</option>
             <option>General Enquiry</option>
@@ -903,6 +984,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
     <div class="foot-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#divisions">Divisions</a></li><li><a href="#why">Why DithaNimba</a></li><li><a href="#contact">Contact</a></li></ul></div>
     <div class="foot-col"><h4>Nimba People</h4><ul><li><a href="#nimba-people">Features</a></li><li><a href="https://nimba-people-demo.netlify.app" target="_blank">Live Demo</a></li><li><a href="#contact">Reseller Programme</a></li><li><a href="#contact">Pricing</a></li></ul></div>
     <div class="foot-col"><h4>Nimba Security</h4><ul><li><a href="#nimba-security">Services</a></li><li><a href="#nimba-security">Pentest Process</a></li><li><a href="#nimba-security">Training</a></li><li><a href="#contact">Book Assessment</a></li></ul></div>
+    <div class="foot-col"><h4>Nimba Logistics</h4><ul><li><a href="#nimba-logistics">Consulting</a></li><li><a href="#nimba-logistics">Route Optimisation</a></li><li><a href="#nimba-logistics">Freight Analysis</a></li><li><a href="#contact">Book a Consultation</a></li></ul></div>
   </div>
   <div class="foot-bottom">
     <span>© 2025 DithaNimba Holdings. All rights reserved.</span>
