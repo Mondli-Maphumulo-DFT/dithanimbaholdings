@@ -943,16 +943,19 @@ footer{background:var(--navy);padding:64px 5vw 36px}
     </div>
 
     <div class="reveal">
-      <form class="form" onsubmit="submitForm(event)">
+      <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitForm(event)">
+        <input type="hidden" name="form-name" value="contact"/>
+        <input type="hidden" name="subject" value="New website enquiry from %{formName}"/>
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"/></label></p>
         <div class="frow">
-          <div class="field"><label>First Name</label><input type="text" placeholder="Mondli" required/></div>
-          <div class="field"><label>Last Name</label><input type="text" placeholder="Maphumulo" required/></div>
+          <div class="field"><label>First Name</label><input type="text" name="first_name" placeholder="Mondli" required/></div>
+          <div class="field"><label>Last Name</label><input type="text" name="last_name" placeholder="Maphumulo" required/></div>
         </div>
-        <div class="field"><label>Email</label><input type="email" placeholder="you@company.co.za" required/></div>
-        <div class="field"><label>Company</label><input type="text" placeholder="Your Company Name"/></div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@company.co.za" required/></div>
+        <div class="field"><label>Company</label><input type="text" name="company" placeholder="Your Company Name"/></div>
         <div class="field">
           <label>I'm Interested In</label>
-          <select>
+          <select name="interested_in">
             <option value="">Select a service...</option>
             <option>Nimba People — HR &amp; ERP System</option>
             <option>Nimba Security — Awareness Training</option>
@@ -963,7 +966,7 @@ footer{background:var(--navy);padding:64px 5vw 36px}
             <option>General Enquiry</option>
           </select>
         </div>
-        <div class="field"><label>Message</label><textarea placeholder="Tell us about your business and what you're looking for..."></textarea></div>
+        <div class="field"><label>Message</label><textarea name="message" placeholder="Tell us about your business and what you're looking for..."></textarea></div>
         <button type="submit" class="btn-gold" aria-label="Send contact form">Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <div id="form-ok">✓ Message sent. We'll be in touch within 24 hours.</div>
       </form>
@@ -1023,20 +1026,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 function submitForm(e){
   e.preventDefault();
   const f = e.target;
-  const name = f.querySelector('input[type=text]').value;
-  const email = f.querySelector('input[type=email]').value;
-  const company = f.querySelectorAll('input[type=text]')[1]?.value || '';
-  const service = f.querySelector('select').value;
-  const msg = f.querySelector('textarea').value;
-  const body = encodeURIComponent(
-    'Name: '+name+'\nEmail: '+email+'\nCompany: '+company+
-    '\nInterested in: '+service+'\n\nMessage:\n'+msg
-  );
-  window.location.href = 'mailto:info@dithanimbaholdings.co.za?subject=Enquiry from '+encodeURIComponent(name)+'&body='+body;
-  const ok = document.getElementById('form-ok');
-  ok.style.display = 'block';
-  f.reset();
-  setTimeout(() => ok.style.display = 'none', 6000);
+  const btn = f.querySelector('button[type=submit]');
+  if (btn) btn.disabled = true;
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(f)).toString()
+  }).then((res) => {
+    if (!res.ok) throw new Error('Submission failed');
+    const ok = document.getElementById('form-ok');
+    ok.style.display = 'block';
+    f.reset();
+    setTimeout(() => ok.style.display = 'none', 6000);
+  }).catch(() => {
+    alert('Sorry, your message could not be sent. Please email info@dithanimbaholdings.co.za directly.');
+  }).finally(() => {
+    if (btn) btn.disabled = false;
+  });
 }
 </script>
 
