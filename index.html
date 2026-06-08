@@ -2,1059 +2,530 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>DithaNimba Holdings — Building Africa's Digital Future</title>
-<meta name="theme-color" content="#1a3a5c"/>
-<meta name="robots" content="index,follow"/>
-<meta property="og:title" content="DithaNimba Holdings"/>
-<meta property="og:description" content="South African technology holding company — Nimba People (HR & ERP), Nimba Security (Cybersecurity) and Nimba Logistics (Logistics Consulting)."/>
-<meta property="og:url" content="https://dithanimbaholdings.co.za"/>
-<meta property="og:type" content="website"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a3a5c'/%3E%3Cg transform='translate(5,7)'%3E%3Crect x='1' y='4' width='20' height='14' rx='2' fill='none' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M14 4V3a2 2 0 00-2-2h-4a2 2 0 00-2 2v1' fill='none' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 11h20' stroke='%23C9A84C' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"/>
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%231a3a5c'/%3E%3Cg transform='translate(28,38)'%3E%3Crect x='4' y='22' width='116' height='80' rx='10' fill='none' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M78 22V16a10 10 0 00-10-10H56a10 10 0 00-10 10v6' fill='none' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M4 62h116' stroke='%23C9A84C' stroke-width='10' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"/>
-<link rel="canonical" href="https://dithanimbaholdings.co.za"/>
-<meta name="description" content="DithaNimba Holdings — home of Nimba People (HR & ERP), Nimba Security (Cybersecurity) and Nimba Logistics (Logistics Consulting). South African technology holding company."/>
-<style>
-.hero-h1{font-family:Georgia,'Times New Roman',serif;font-weight:700}
-.hero-h1 em{font-style:italic}
-.nav-name{font-family:Georgia,serif}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DithaNimba Holdings — People HR &amp; Payroll · Nimba Security</title>
+<meta name="description" content="People by DithaNimba Holdings — cloud-based HR, payroll and leave management built for South African businesses. PAYE, UIF & BCEA compliant. Live in 24 hours."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 :root{
-  /* exact Nimba People palette */
-  --navy:      #1a3a5c;
-  --navy-dark: #122a44;
-  --navy-mid:  #1e3a5c;
-  --navy-deep: #0f2035;
-  --navy-light:#e3edf6;
-  --bg:        #f8fafc;
-  --surface:   #ffffff;
-  --border:    #e2e8f0;
-  --border2:   #cbd5e1;
-  --gold:      #C9A84C;
-  --gold-light:#fef3c7;
-  --gold-dark: #92640a;
-  --teal:      #06B6D4;
-  --teal-light:#cffafe;
-  --teal-dark: #0e7490;
-  --red:       #E63946;
-  --red-light: #fee2e2;
-  --red-dark:  #991b1b;
-  --muted:     #64748b;
-  --muted2:    #94a3b8;
-  --text:      #0f172a;
+  --navy:#1a3a5c; --navy-d:#122a44; --navy-deep:#0d1f33;
+  --gold:#C9A84C; --gold-d:#a8842f;
+  --teal:#0ea5a4; --teal-light:#e6f7f7;
+  --ink:#13243a; --slate:#5a6b80; --mute:#8a98aa;
+  --bg:#ffffff; --bg-soft:#f6f9fc; --bg-mint:#eef6f6;
+  --border:#e4ebf3; --shadow:0 4px 24px rgba(19,36,58,0.07);
+  --shadow-lg:0 24px 60px rgba(19,36,58,0.12);
+  --r:18px; --r-sm:12px;
+  --display:'Fraunces',Georgia,serif; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
 }
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
-@font-face{font-display:swap}
-.skip-link:focus{left:0!important}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--navy);border-radius:2px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+section{padding:110px 6vw;position:relative}
+.wrap{max-width:1200px;margin:0 auto}
 
 /* ── NAV ── */
-#nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  height:68px;padding:0 5vw;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(248,250,252,0);
-  backdrop-filter:blur(0px);
-  border-bottom:1px solid transparent;
-  transition:all 0.35s;
-}
-#nav.scrolled{background:rgba(248,250,252,0.96);backdrop-filter:blur(20px);border-bottom-color:var(--border);box-shadow:0 1px 12px rgba(0,0,0,0.06)}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-hex{
-  width:36px;height:36px;
-  background:var(--navy);
-  border-radius:10px;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  transition:background 0.2s;
-  box-shadow:0 2px 8px rgba(26,58,92,0.25);
-}
-#nav.scrolled .nav-hex{background:var(--navy)}
-.nav-hex span{display:none}
-.nav-name{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Syne','Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:800;color:var(--navy);letter-spacing:-0.01em}
-/* hero nav - white version */
-.nav-name-hero{color:#fff}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;font-weight:400;transition:color 0.2s}
-.nav-links a:hover{color:#fff}
-#nav.scrolled .nav-links a{color:var(--muted)}
-#nav.scrolled .nav-links a:hover{color:var(--navy)}
-#nav.scrolled .nav-name-hero{color:var(--navy)}
-
-.nav-login{
-  color:var(--gold-dark);font-size:13px;font-weight:600;
-  text-decoration:none;
-  padding:8px 16px;border-radius:8px;
-  border:1px solid rgba(201,168,76,0.4);
-  background:rgba(201,168,76,0.06);
-  transition:all 0.2s;display:flex;align-items:center;gap:6px;
-}
-.nav-login:hover{background:rgba(201,168,76,0.12);border-color:var(--gold)}
-#nav.scrolled .nav-login{color:var(--gold-dark)}
-.nav-login svg{flex-shrink:0}
-.nav-cta{
-  background:rgba(255,255,255,0.15);color:#fff;
-  border:1px solid rgba(255,255,255,0.35);
-  padding:8px 20px;border-radius:8px;
-  font-size:13px;font-weight:500;
-  text-decoration:none;transition:all 0.2s;
-  backdrop-filter:blur(8px);
-}
-.nav-cta:hover{background:rgba(255,255,255,0.25)}
-#nav.scrolled 
-.nav-login{
-  color:var(--gold-dark);font-size:13px;font-weight:600;
-  text-decoration:none;
-  padding:8px 16px;border-radius:8px;
-  border:1px solid rgba(201,168,76,0.4);
-  background:rgba(201,168,76,0.06);
-  transition:all 0.2s;display:flex;align-items:center;gap:6px;
-}
-.nav-login:hover{background:rgba(201,168,76,0.12);border-color:var(--gold)}
-#nav.scrolled .nav-login{color:var(--gold-dark)}
-.nav-login svg{flex-shrink:0}
-.nav-cta{background:var(--navy);color:#fff;border-color:var(--navy)}
-#nav.scrolled .nav-cta:hover{background:var(--navy-dark)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
-.hamburger span{width:22px;height:1.5px;background:#fff;transition:background 0.3s}
-#nav.scrolled .hamburger span{background:var(--navy)}
-.mob-menu{
-  display:none;position:fixed;top:68px;left:0;right:0;
-  background:var(--surface);border-bottom:1px solid var(--border);
-  padding:20px 5vw 28px;z-index:199;
-  box-shadow:0 8px 24px rgba(0,0,0,0.08);
-}
-.mob-menu.open{display:flex;flex-direction:column;gap:16px}
-.mob-menu a{color:var(--muted);text-decoration:none;font-size:15px;padding:6px 0;border-bottom:1px solid var(--border)}
-.mob-menu a:hover{color:var(--navy)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 6vw;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.85);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
+nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 20px rgba(19,36,58,0.05)}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{width:38px;height:38px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(26,58,92,0.28)}
+.logo-txt{font-weight:800;font-size:17px;letter-spacing:-0.02em;color:var(--navy)}
+.logo-txt small{display:block;font-size:9px;font-weight:600;letter-spacing:0.14em;color:var(--mute);text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--slate);transition:.2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;padding:11px 22px;border-radius:10px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-d);transform:translateY(-1px);box-shadow:0 8px 20px rgba(26,58,92,0.25)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-d);transform:translateY(-1px);box-shadow:0 8px 20px rgba(201,168,76,0.35)}
+.btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--navy);background:var(--bg-soft)}
+.nav-login{font-size:14px;font-weight:600;color:var(--navy)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.burger span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:.3s}
 
 /* ── HERO ── */
-.hero{
-  min-height:100vh;
-  background:var(--navy);
-  display:flex;flex-direction:column;justify-content:center;
-  padding:120px 5vw 80px;
-  position:relative;overflow:hidden;
-}
-/* subtle grid pattern on navy */
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
-  background-size:64px 64px;
-  mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,rgba(0,0,0,0.6) 20%,transparent 100%);
-}
-.hero-glow{
-  position:absolute;pointer-events:none;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(6,182,212,0.12) 0%,transparent 70%);
-  top:-200px;right:-100px;
-}
-.hero-glow2{
-  position:absolute;pointer-events:none;
-  width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%);
-  bottom:-100px;left:5vw;
-}
-.hero-inner{position:relative;z-index:1;max-width:860px}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;font-weight:500;
-  color:rgba(255,255,255,0.55);
-  letter-spacing:0.12em;text-transform:uppercase;
-  margin-bottom:32px;
-  opacity:0;animation:fadeUp 0.8s 0.2s ease forwards;
-}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
-.hero-h1{will-change:transform,opacity;
-  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
-  font-size:clamp(52px,7.5vw,100px);
-  font-weight:900;
-  line-height:0.97;
-  letter-spacing:-0.03em;
-  color:#fff;
-  margin-bottom:32px;
-  opacity:0;animation:fadeUp 0.8s 0.42s ease forwards;
-}
-.hero-h1 em{color:var(--gold);font-style:italic}
-.hero-p{
-  font-size:clamp(15px,1.8vw,19px);
-  color:rgba(255,255,255,0.75);
-  max-width:520px;
-  line-height:1.8;
-  margin-bottom:48px;
-  opacity:0;animation:fadeUp 0.8s 0.6s ease forwards;
-}
-.hero-btns{
-  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
-  opacity:0;animation:fadeUp 0.8s 0.76s ease forwards;
-}
-.btn-gold{
-  background:var(--gold);color:var(--navy-deep);
-  padding:14px 32px;border-radius:10px;
-  font-size:14px;font-weight:600;
-  text-decoration:none;transition:all 0.2s;
-  display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;
-}
-.btn-gold:hover{background:#d4b05a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.35)}
-.btn-light{
-  background:rgba(255,255,255,0.1);color:#fff;
-  padding:14px 32px;border-radius:10px;
-  font-size:14px;font-weight:500;
-  border:1px solid rgba(255,255,255,0.25);
-  text-decoration:none;transition:all 0.2s;
-  display:inline-flex;align-items:center;gap:8px;
-  backdrop-filter:blur(8px);
-}
-.btn-light:hover{background:rgba(255,255,255,0.18);border-color:rgba(255,255,255,0.4)}
-.hero-scroll{
-  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  opacity:0;animation:fadeUp 0.8s 1.1s ease forwards;
-}
-.hero-scroll span{font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.12em;text-transform:uppercase}
-.hero-scroll-line{width:1px;height:40px;display:block;background:linear-gradient(var(--gold),transparent);animation:scrollpulse 1.9s ease-in-out infinite}
+.hero{padding-top:170px;padding-bottom:80px;background:linear-gradient(180deg,var(--bg-soft) 0%,var(--bg) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--bg-mint);color:var(--teal);font-size:13px;font-weight:600;padding:7px 15px;border-radius:30px;margin-bottom:26px;border:1px solid #d4ecec}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--display);font-size:clamp(38px,5.2vw,64px);line-height:1.04;font-weight:600;letter-spacing:-0.02em;color:var(--navy);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:19px;color:var(--slate);max-width:520px;margin-bottom:34px;line-height:1.6}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-lg{padding:15px 30px;font-size:15.5px;border-radius:12px}
+.hero-note{display:flex;align-items:center;gap:18px;margin-top:30px;flex-wrap:wrap}
+.hero-note span{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--slate);font-weight:500}
+.hero-note svg{color:var(--teal);flex-shrink:0}
 
-/* ── STAT BAR ── */
-.statbar{content-visibility:auto;contain-intrinsic-size:0 200px;
-  background:var(--surface);
-  border-bottom:1px solid var(--border);
-  display:grid;grid-template-columns:repeat(4,1fr);
-}
-.stat{padding:40px 5vw;text-align:center;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none}
-.stat-v{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:44px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:8px}
-.stat-l{font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
+/* hero visual — app mockup */
+.hero-visual{position:relative}
+.mock{background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);border:1px solid var(--border);overflow:hidden;transform:perspective(1400px) rotateY(-7deg) rotateX(3deg);transition:.5s}
+.hero-visual:hover .mock{transform:perspective(1400px) rotateY(-3deg) rotateX(1deg)}
+.mock-bar{background:var(--navy);padding:13px 16px;display:flex;align-items:center;gap:7px}
+.mock-bar i{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25)}
+.mock-body{padding:22px}
+.mock-row{display:flex;align-items:center;gap:12px;padding:13px;border-radius:12px;background:var(--bg-soft);margin-bottom:11px}
+.mock-av{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:13px}
+.mock-line{flex:1}
+.mock-line b{display:block;height:9px;width:55%;background:var(--navy);opacity:.85;border-radius:4px;margin-bottom:6px}
+.mock-line span{display:block;height:7px;width:35%;background:var(--mute);opacity:.4;border-radius:4px}
+.mock-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--teal-light);color:var(--teal)}
+.float-card{position:absolute;background:#fff;border-radius:14px;box-shadow:var(--shadow-lg);padding:15px 18px;border:1px solid var(--border);display:flex;align-items:center;gap:12px;animation:floaty 4s ease-in-out infinite}
+.float-1{top:-22px;right:-10px;animation-delay:0s}
+.float-2{bottom:-20px;left:-26px;animation-delay:1.5s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float-ic{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.float-card b{font-size:18px;font-weight:800;color:var(--navy);display:block;line-height:1.1}
+.float-card small{font-size:11px;color:var(--mute);font-weight:500}
 
-/* ── SHARED ── */
-section{padding:96px 5vw;position:relative}
-.tag{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:var(--navy);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:18px}
-.tag-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;background:var(--gold)}
-.sh2{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(36px,4.5vw,58px);font-weight:900;line-height:1.08;letter-spacing:-0.025em;color:var(--navy);margin-bottom:20px}
-.sh2 em{color:var(--gold);font-style:italic}
-.sp{font-size:17px;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:44px}
+/* ── LOGO STRIP ── */
+.trust{padding:46px 6vw;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-soft)}
+.trust p{text-align:center;font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-bottom:26px}
+.trust-row{display:flex;justify-content:center;align-items:center;gap:54px;flex-wrap:wrap;opacity:.62}
+.trust-item{font-weight:700;font-size:17px;color:var(--slate);display:flex;align-items:center;gap:9px}
 
-/* ── ABOUT ── */
-.about{background:var(--bg);content-visibility:auto;contain-intrinsic-size:0 600px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.pillar-list{display:flex;flex-direction:column;gap:1px}
-.pillar{
-  display:flex;gap:20px;
-  padding:20px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-left:3px solid transparent;
-  transition:all 0.2s;
-  margin-bottom:4px;
-  border-radius:10px;
-}
-.pillar:hover{border-left-color:var(--gold);box-shadow:0 4px 16px rgba(26,58,92,0.07)}
-.pillar-n{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:0.1em;padding-top:2px;flex-shrink:0}
-.pillar-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:5px}
-.pillar-b{font-size:13px;color:var(--muted);line-height:1.65}
-/* holding card */
-.holding-wrap{position:sticky;top:90px}
-.holding-card{
-  background:var(--navy);border-radius:16px;
-  padding:32px;margin-bottom:16px;
-  box-shadow:0 8px 32px rgba(26,58,92,0.25);
-}
-.holding-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.holding-hex{
-  width:48px;height:48px;flex-shrink:0;
-  background:var(--gold);
-  border-radius:14px;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 12px rgba(201,168,76,0.35);
-}
-.holding-hex span{display:none}
-.holding-nm{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:#fff}
-.holding-sub-lbl{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-top:2px}
-.holding-body-txt{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:20px}
-.div-pills{display:flex;gap:8px;flex-wrap:wrap}
-.pill-teal{background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.3);color:#67e8f9;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
-.pill-red{background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.3);color:#fca5a5;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
-.div-mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.dmc{
-  background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s;
-}
-.dmc:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,58,92,0.1)}
-.dmc-ic{
-  width:36px;height:36px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:12px;
-}
-.dmc-ic-teal{background:var(--teal-light);border:1px solid rgba(6,182,212,0.2)}
-.dmc-ic-red{background:var(--red-light);border:1px solid rgba(230,57,70,0.2)}
-.dmc-t{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
-.dmc-b{font-size:12px;color:var(--muted);line-height:1.5}
+/* ── SECTION HEADERS ── */
+.sec-head{text-align:center;max-width:680px;margin:0 auto 64px}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;background:var(--bg-mint);color:var(--teal);font-size:13px;font-weight:700;padding:7px 16px;border-radius:30px;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.06em}
+.sec-head h2{font-family:var(--display);font-size:clamp(30px,3.6vw,46px);line-height:1.08;font-weight:600;letter-spacing:-0.02em;color:var(--navy);margin-bottom:18px}
+.sec-head h2 em{font-style:italic;color:var(--gold)}
+.sec-head p{font-size:18px;color:var(--slate)}
+.sec-tag.gold{background:#faf3e0;color:var(--gold-d)}
 
-/* ── DIVISIONS ── */
-.divisions{background:var(--surface);content-visibility:auto;contain-intrinsic-size:0 700px}
-.div-intro{text-align:center;margin-bottom:64px}
-.div-intro .sp{margin:0 auto}
-.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.div-card{
-  border-radius:16px;overflow:hidden;
-  border:1px solid var(--border);
-  text-decoration:none;color:inherit;
-  display:block;position:relative;
-  transition:all 0.3s;
-  box-shadow:0 2px 8px rgba(0,0,0,0.04);
-}
-.div-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,58,92,0.12)}
-.div-card-top{padding:40px 40px 32px;position:relative;overflow:hidden}
-.div-people-top{background:var(--navy)}
-.div-security-top{background:linear-gradient(135deg,#1a0a0d 0%,#2d0e14 100%)}
-.div-card-body{padding:32px 40px 36px;background:var(--surface)}
-.div-idx{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:28px;display:block;opacity:0.7}
-.div-people .div-idx{color:rgba(103,232,249,0.9)}
-.div-security .div-idx{color:rgba(252,165,165,0.9)}
-.div-icon-wrap{
-  width:56px;height:56px;border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:24px;
-}
-.div-people .div-icon-wrap{background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.25)}
-.div-security .div-icon-wrap{background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.25)}
-.div-title{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:clamp(30px,3.5vw,46px);font-weight:900;line-height:1.05;color:#fff;margin-bottom:14px;letter-spacing:-0.02em}
-.div-tagline{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.7;max-width:340px}
-.div-feats{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
-.div-feat{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
-.div-feat-tick{
-  width:18px;height:18px;border-radius:5px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-}
-.div-people-tick{background:var(--teal-light)}
-.div-security-tick{background:var(--red-light)}
-.div-link-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:600;
-  padding:10px 20px;border-radius:8px;
-  transition:all 0.2s;
-}
-.div-people .div-link-btn{background:var(--teal-light);color:var(--teal-dark)}
-.div-people .div-link-btn:hover{background:rgba(6,182,212,0.2)}
-.div-security .div-link-btn{background:var(--red-light);color:var(--red-dark)}
-.div-security .div-link-btn:hover{background:rgba(230,57,70,0.15)}
-/* background orb on card top */
-.div-orb{position:absolute;border-radius:50%;pointer-events:none;opacity:0.12}
-.div-people-orb{width:300px;height:300px;background:radial-gradient(circle,var(--teal),transparent 70%);top:-80px;right:-60px}
-.div-security-orb{width:300px;height:300px;background:radial-gradient(circle,var(--red),transparent 70%);bottom:-80px;left:-60px}
+/* ── FEATURE GRID ── */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1200px;margin:0 auto}
+.feat{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:34px 30px;transition:.3s}
+.feat:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.feat-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.feat h3{font-size:19px;font-weight:700;color:var(--navy);margin-bottom:11px;letter-spacing:-0.01em}
+.feat p{font-size:15px;color:var(--slate);line-height:1.65}
 
-/* ── NIMBA PEOPLE DETAIL ── */
-.np-section{background:var(--bg);content-visibility:auto;contain-intrinsic-size:0 700px}
-.feat-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-  margin:56px 0 48px;
-}
-.feat-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:14px;
-  padding:28px 24px;transition:all 0.2s;
-}
-.feat-card:hover{border-color:rgba(6,182,212,0.25);box-shadow:0 6px 20px rgba(26,58,92,0.08);transform:translateY(-2px)}
-.feat-ic{
-  width:40px;height:40px;border-radius:10px;
-  background:var(--teal-light);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:16px;
-}
-.feat-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px}
-.feat-b{font-size:13px;color:var(--muted);line-height:1.7}
-.np-cta{
-  padding:40px 44px;
-  background:var(--navy);border-radius:16px;
-  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
-  box-shadow:0 8px 32px rgba(26,58,92,0.2);
-}
-.np-cta h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
-.np-cta p{font-size:14px;color:rgba(255,255,255,0.55)}
-.btn-teal{
-  background:var(--teal);color:#fff;padding:13px 28px;border-radius:10px;
-  font-size:14px;font-weight:600;text-decoration:none;
-  transition:all 0.2s;white-space:nowrap;flex-shrink:0;
-}
-.btn-teal:hover{filter:brightness(1.1);transform:translateY(-1px)}
+/* ── SPLIT FEATURE ── */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1200px;margin:0 auto}
+.split.alt{direction:rtl}
+.split.alt>*{direction:ltr}
+.split-img{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);background:var(--bg-soft)}
+.split-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:6px 14px;border-radius:30px;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.05em}
+.split h2{font-family:var(--display);font-size:clamp(28px,3.2vw,40px);line-height:1.1;font-weight:600;color:var(--navy);margin-bottom:20px;letter-spacing:-0.02em}
+.split p.lead{font-size:17px;color:var(--slate);margin-bottom:26px}
+.checklist{display:flex;flex-direction:column;gap:15px;margin-bottom:30px}
+.check{display:flex;gap:13px;align-items:flex-start}
+.check-ic{width:24px;height:24px;border-radius:7px;background:var(--bg-mint);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.check b{font-weight:700;color:var(--navy);font-size:15.5px}
+.check span{color:var(--slate);font-size:14.5px}
 
-/* ── NIMBA SECURITY DETAIL ── */
-.ns-section{background:var(--surface);content-visibility:auto;contain-intrinsic-size:0 700px}
-.ns-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.offering{
-  background:var(--bg);border:1px solid var(--border);border-radius:12px;
-  padding:22px 24px;margin-bottom:12px;transition:all 0.2s;
-}
-.offering:hover{border-color:rgba(230,57,70,0.25);box-shadow:0 4px 16px rgba(230,57,70,0.07)}
-.offering-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px}
-.offering-t{font-size:15px;font-weight:600;color:var(--navy)}
-.badge{
-  font-size:11px;font-weight:600;color:var(--red-dark);
-  background:var(--red-light);padding:3px 10px;border-radius:20px;
-  letter-spacing:0.04em;
-}
-.offering-b{font-size:13px;color:var(--muted);line-height:1.65}
-/* pentest steps */
-.pentest-wrap{background:var(--bg);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:4px}
-.pentest-hdr{
-  padding:20px 24px;border-bottom:1px solid var(--border);
-  background:var(--navy);
-}
-.pentest-hdr-lbl{font-size:11px;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px}
-.pentest-hdr-t{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:#fff}
-.psteps{}
-.pstep{display:flex;gap:18px;padding:16px 24px;border-bottom:1px solid var(--border);transition:background 0.2s}
-.pstep:last-child{border-bottom:none}
-.pstep:hover{background:var(--surface)}
-.pstep-n{
-  width:26px;height:26px;border-radius:8px;flex-shrink:0;
-  background:var(--red-light);
-  display:flex;align-items:center;justify-content:center;
-  font-size:11px;font-weight:700;color:var(--red-dark);margin-top:1px;
-}
-.pstep-t{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:3px}
-.pstep-b{font-size:13px;color:var(--muted);line-height:1.6}
-.ns-cta{
-  margin-top:20px;padding:28px;
-  background:var(--red-light);border:1px solid rgba(230,57,70,0.2);border-radius:14px;
-}
-.ns-cta h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
-.ns-cta p{font-size:14px;color:var(--muted);margin-bottom:18px;line-height:1.7}
-.btn-red{
-  background:var(--red);color:#fff;
-  padding:11px 26px;border-radius:10px;
-  font-size:13px;font-weight:600;text-decoration:none;
-  display:inline-block;transition:all 0.2s;
-}
-.btn-red:hover{filter:brightness(1.1);transform:translateY(-1px)}
+/* product screenshot mock for split */
+.shot{padding:26px}
+.shot-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.shot-title{font-weight:700;color:var(--navy);font-size:15px}
+.shot-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.shot-stat div{background:#fff;border:1px solid var(--border);border-radius:12px;padding:15px}
+.shot-stat b{font-size:24px;font-weight:800;color:var(--navy);font-family:var(--display)}
+.shot-stat small{font-size:11px;color:var(--mute);font-weight:500;display:block;margin-top:2px}
+.shot-bar{height:10px;border-radius:6px;background:#fff;border:1px solid var(--border);margin-bottom:10px;overflow:hidden}
+.shot-bar i{display:block;height:100%;border-radius:6px}
 
-/* ── WHY ── */
-.why{background:var(--bg);content-visibility:auto;contain-intrinsic-size:0 600px}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
-.why-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:14px;
-  padding:30px 26px;transition:all 0.2s;
-}
-.why-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,58,92,0.09);border-color:rgba(201,168,76,0.25)}
-.why-ic{
-  width:42px;height:42px;border-radius:10px;
-  background:var(--navy-light);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:18px;
-}
-.why-t{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
-.why-b{font-size:14px;color:var(--muted);line-height:1.7}
+/* ── STATS BAND ── */
+.stats-band{background:var(--navy);color:#fff;border-radius:28px;padding:60px 50px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative;overflow:hidden}
+.stats-band::before{content:"";position:absolute;top:-40%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.18),transparent 70%);border-radius:50%}
+.stat-box{text-align:center;position:relative;z-index:1}
+.stat-box b{font-family:var(--display);font-size:46px;font-weight:600;color:var(--gold);display:block;line-height:1}
+.stat-box span{font-size:14px;color:rgba(255,255,255,0.7);margin-top:10px;display:block;font-weight:500}
 
-/* ── CONTACT ── */
-.contact{background:var(--surface);content-visibility:auto;contain-intrinsic-size:0 700px}
-.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
-.c-items{display:flex;flex-direction:column;gap:20px;margin-bottom:36px}
-.c-item{display:flex;align-items:flex-start;gap:16px;padding:18px;background:var(--bg);border:1px solid var(--border);border-radius:12px;transition:all 0.2s}
-.c-item:hover{border-color:rgba(26,58,92,0.2);box-shadow:0 2px 12px rgba(26,58,92,0.06)}
-.c-ic{
-  width:40px;height:40px;border-radius:10px;flex-shrink:0;
-  background:var(--navy-light);
-  display:flex;align-items:center;justify-content:center;
-}
-.c-lbl{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px}
-.c-val{font-size:15px;color:var(--navy)}
-.c-val a{color:var(--navy);text-decoration:none}
-.c-val a:hover{color:var(--gold-dark)}
-.cdivs{padding-top:24px;border-top:1px solid var(--border)}
-.cdivs-lbl{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
-.cdiv-link{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);text-decoration:none;padding:8px 0;border-bottom:1px solid var(--border);transition:color 0.2s}
-.cdiv-link:last-child{border-bottom:none}
-.cdiv-link:hover{color:var(--navy)}
-.cdot{width:8px;height:8px;border-radius:50%}
-/* form */
-.form{display:flex;flex-direction:column;gap:14px;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:32px}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{display:flex;flex-direction:column;gap:6px}
-.field label{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase}
-.field input,.field select,.field textarea{
-  background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  padding:11px 14px;color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;
-  outline:none;transition:all 0.2s;width:100%;-webkit-appearance:none;
-}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-light)}
-.field textarea{resize:vertical;min-height:100px}
-.field select option{background:var(--surface)}
-#form-ok{display:none;padding:12px 16px;background:#dcfce7;border:1px solid #86efac;border-radius:8px;font-size:14px;color:#166534}
+/* ── PRICING ── */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1100px;margin:0 auto}
+.price{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:36px 30px;position:relative;transition:.3s;display:flex;flex-direction:column}
+.price:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.price.feat-plan{border-color:var(--navy);box-shadow:var(--shadow-lg);transform:scale(1.03)}
+.price.feat-plan:hover{transform:scale(1.03) translateY(-4px)}
+.price-pop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:11.5px;font-weight:800;padding:6px 16px;border-radius:20px;letter-spacing:0.04em;text-transform:uppercase}
+.price-name{font-size:14px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
+.price-amt{font-family:var(--display);font-size:42px;font-weight:600;color:var(--navy);line-height:1;letter-spacing:-0.02em}
+.price-amt small{font-size:16px;font-weight:500;color:var(--mute);font-family:var(--sans)}
+.price-sub{font-size:13.5px;color:var(--slate);margin:10px 0 24px;min-height:38px}
+.price ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:30px;flex:1}
+.price li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--slate)}
+.price li svg{color:var(--teal);flex-shrink:0;margin-top:3px}
+.price .btn{width:100%;justify-content:center}
 
-/* ── NIMBA LOGISTICS (gold accent) ── */
-.div-logistics-top{background:linear-gradient(135deg,#2a2410 0%,#3d3416 100%)}
-.div-logistics .div-idx{color:rgba(201,168,76,0.95)}
-.div-logistics .div-icon-wrap{background:rgba(201,168,76,0.16);border:1px solid rgba(201,168,76,0.3)}
-.div-logistics-orb{width:300px;height:300px;background:radial-gradient(circle,var(--gold),transparent 70%);top:-80px;right:-60px}
-.div-logistics-tick{background:var(--gold-light)}
-.div-logistics .div-link-btn{background:var(--gold-light);color:var(--gold-dark)}
-.div-logistics .div-link-btn:hover{background:rgba(201,168,76,0.22)}
-.pill-gold{background:rgba(201,168,76,0.16);border:1px solid rgba(201,168,76,0.32);color:#d4b05a;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500}
-.dmc-ic-gold{background:var(--gold-light);border:1px solid rgba(201,168,76,0.25)}
-.nl-section{background:var(--bg);content-visibility:auto;contain-intrinsic-size:0 700px}
-.feat-logistics .feat-ic{background:var(--gold-light)}
-.feat-logistics:hover{border-color:rgba(201,168,76,0.25)}
-.nl-cta{margin-top:8px;padding:40px 44px;background:var(--navy);border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:0 8px 32px rgba(26,58,92,0.2)}
-.nl-cta h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:6px}
-.nl-cta p{font-size:14px;color:rgba(255,255,255,0.55)}
-.btn-goldcta{background:var(--gold);color:var(--navy-deep);padding:13px 28px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s;white-space:nowrap;flex-shrink:0}
-.btn-goldcta:hover{background:#d4b05a;transform:translateY(-1px)}
+/* ── TESTIMONIAL ── */
+.quote-wrap{max-width:900px;margin:0 auto;text-align:center}
+.quote-mark{font-family:var(--display);font-size:90px;color:var(--gold);line-height:0.5;height:50px}
+.quote-wrap blockquote{font-family:var(--display);font-size:clamp(24px,3vw,34px);line-height:1.34;color:var(--navy);font-weight:500;margin-bottom:30px;letter-spacing:-0.01em}
+.quote-author{display:flex;align-items:center;justify-content:center;gap:14px}
+.quote-av{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+.quote-author b{display:block;color:var(--navy);font-size:15.5px}
+.quote-author span{font-size:13.5px;color:var(--mute)}
+
+/* ── CTA ── */
+.cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);border-radius:30px;padding:70px 50px;text-align:center;max-width:1100px;margin:0 auto;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;top:-30%;left:-5%;width:380px;height:380px;background:radial-gradient(circle,rgba(201,168,76,0.2),transparent 70%);border-radius:50%}
+.cta-band::after{content:"";position:absolute;bottom:-40%;right:-5%;width:420px;height:420px;background:radial-gradient(circle,rgba(14,165,164,0.15),transparent 70%);border-radius:50%}
+.cta-band>*{position:relative;z-index:1}
+.cta-band h2{font-family:var(--display);font-size:clamp(30px,4vw,46px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:18px;letter-spacing:-0.02em}
+.cta-band p{font-size:18px;color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 34px}
+.cta-band .hero-btns{justify-content:center}
 
 /* ── FOOTER ── */
-footer{background:var(--navy);padding:64px 5vw 36px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
-.foot-about{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:14px;max-width:260px}
-.foot-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.foot-col ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
-.foot-col ul li a:hover{color:var(--gold)}
-.foot-bottom{
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
-  padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);
-  font-size:13px;color:rgba(255,255,255,0.35);
-}
-.foot-bottom a{color:rgba(255,255,255,0.35);text-decoration:none}
-.foot-bottom a:hover{color:var(--gold)}
+footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:70px 6vw 36px}
+.foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.foot-brand .logo{margin-bottom:18px}
+.foot-brand p{font-size:14.5px;color:var(--slate);max-width:300px;line-height:1.65}
+.foot-col h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:18px}
+.foot-col a{display:block;font-size:14.5px;color:var(--slate);margin-bottom:12px;transition:.2s}
+.foot-col a:hover{color:var(--navy)}
+.foot-bottom{max-width:1200px;margin:0 auto;padding-top:30px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.foot-bottom p{font-size:13.5px;color:var(--mute)}
+.foot-social{display:flex;gap:12px}
+.foot-social a{width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--slate);transition:.2s}
+.foot-social a:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-@keyframes scrollpulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.3;transform:scaleY(0.5)}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.in{opacity:1;transform:translateY(0)}
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
 
-
-@media(prefers-reduced-motion:reduce){
-  .reveal,.hero-h1,.hero-p,.hero-eyebrow,.hero-btns,.hero-scroll{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
-  .hero-dot,.hero-scroll-line{animation:none!important}
+/* ── RESPONSIVE ── */
+@media(max-width:920px){
+  .hero-grid,.split,.split.alt{grid-template-columns:1fr;gap:44px;direction:ltr}
+  .hero-visual{order:-1;max-width:440px;margin:0 auto}
+  .feat-grid,.price-grid{grid-template-columns:1fr;max-width:440px}
+  .stats-band{grid-template-columns:repeat(2,1fr);gap:36px 20px;padding:48px 30px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .price.feat-plan{transform:none}
+  .price.feat-plan:hover{transform:translateY(-4px)}
+  .nav-links{display:none}
 }
-
-.wa-float{
-  position:fixed;bottom:28px;right:28px;z-index:1000;
-  width:52px;height:52px;border-radius:50%;
-  background:#25D366;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(37,211,102,0.4);
-  text-decoration:none;
-  transition:all 0.25s;
-  animation:waPulse 2.5s ease-in-out infinite;
-}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
-.wa-tooltip{
-  position:absolute;right:62px;
-  background:#0f172a;color:#fff;
-  font-size:12px;font-weight:500;
-  padding:6px 12px;border-radius:6px;
-  white-space:nowrap;opacity:0;
-  transition:opacity 0.2s;pointer-events:none;
-}
-.wa-float:hover .wa-tooltip{opacity:1}
-@keyframes waPulse{
-  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}
-  50%{box-shadow:0 4px 32px rgba(37,211,102,0.65)}
-}
-/* ── MOBILE ── */
-@media(max-width:1100px){
-  .foot-grid{grid-template-columns:1fr 1fr 1fr}
-  .div-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:960px){
-  .nav-links,
-.nav-login{
-  color:var(--gold-dark);font-size:13px;font-weight:600;
-  text-decoration:none;
-  padding:8px 16px;border-radius:8px;
-  border:1px solid rgba(201,168,76,0.4);
-  background:rgba(201,168,76,0.06);
-  transition:all 0.2s;display:flex;align-items:center;gap:6px;
-}
-.nav-login:hover{background:rgba(201,168,76,0.12);border-color:var(--gold)}
-#nav.scrolled .nav-login{color:var(--gold-dark)}
-.nav-login svg{flex-shrink:0}
-.nav-cta{display:none}
-  .hamburger{display:flex}
-  .about-grid,.ns-grid,.contact-grid,.foot-grid{grid-template-columns:1fr}
-  .div-grid{grid-template-columns:1fr}
-  .feat-grid,.why-grid{grid-template-columns:1fr 1fr}
-  .statbar{content-visibility:auto;contain-intrinsic-size:0 200px;grid-template-columns:1fr 1fr}
-  .stat{border-bottom:1px solid var(--border)}
-  .hero-scroll{display:none}
-  .div-mini-cards{grid-template-columns:1fr}
-  .holding-wrap{position:static}
-  .frow{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .feat-grid,.why-grid{grid-template-columns:1fr}
-  .np-cta{flex-direction:column;align-items:flex-start}
+@media(max-width:560px){
+  section{padding:72px 6vw}
+  .hero{padding-top:130px}
+  .stats-band{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-cta .btn-ghost,.nav-login{display:none}
+  .nav-cta .btn-primary{padding:10px 18px;font-size:14px}
+  .hero-note{gap:12px}
+  .logo-txt{font-size:16px}
 }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "DithaNimba Holdings",
-  "url": "https://dithanimbaholdings.co.za",
-  "logo": "https://dithanimbaholdings.co.za",
-  "description": "South African technology holding company — home of Nimba People (HR & ERP) and Nimba Security (Cybersecurity).",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Johannesburg",
-    "addressCountry": "ZA"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "info@dithanimbaholdings.co.za",
-    "contactType": "customer service"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Technology Solutions",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Nimba People — HR & ERP",
-        "url": "https://people.dithanimbaholdings.co.za"
-      },
-      {
-        "@type": "Offer",
-        "name": "Nimba Security — Cybersecurity",
-        "url": "https://dithanimbaholdings.co.za/#nimba-security"
-      },
-      {
-        "@type": "Offer",
-        "name": "Nimba Logistics — Logistics Consulting",
-        "url": "https://dithanimbaholdings.co.za/#nimba-logistics"
-      }
-    ]
-  }
-}
-</script>
 </head>
 <body>
-<a class="skip-link" href="#about" style="position:absolute;left:-9999px;top:0;z-index:9999;background:var(--navy);color:#fff;padding:12px 20px;border-radius:0 0 8px 0;font-size:14px;font-weight:600" onfocus="this.style.left='0'">Skip to main content</a>
 
-<!-- NAV -->
-<nav id="nav" aria-label="Main navigation">
-  <a href="#home" class="nav-logo">
-    <div class="nav-hex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
-    <span class="nav-name nav-name-hero">DithaNimba Holdings</span>
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#home" class="logo">
+    <div class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
+    <div class="logo-txt">DithaNimba<small>Holdings</small></div>
   </a>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#divisions">Divisions</a>
-    <a href="#nimba-people">Nimba People</a>
-    <a href="#nimba-security">Nimba Security</a>
-    <a href="#nimba-logistics">Nimba Logistics</a>
+    <a href="#product">Product</a>
+    <a href="#features">Features</a>
+    <a href="#security">Security</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </div>
-  <div style="display:flex;align-items:center;gap:10px">
-    <a href="https://people.dithanimbaholdings.co.za" class="nav-login" target="_blank">Client Login</a>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
+  <div class="nav-cta">
+    <a href="https://people.dithanimbaholdings.co.za" target="_blank" class="nav-login">Client Login</a>
+    <a href="#contact" class="btn btn-ghost">Book a Demo</a>
+    <a href="#pricing" class="btn btn-primary">Get Started</a>
   </div>
-  <button class="hamburger" onclick="toggleMenu()" id="hbg" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-<nav class="mob-menu" aria-label="Mobile navigation" id="mob"><a href="#about" onclick="closeMob()" aria-label="Close menu">About</a><a href="#divisions" onclick="closeMob()">Divisions</a><a href="#nimba-people" onclick="closeMob()">Nimba People</a><a href="#nimba-security" onclick="closeMob()">Nimba Security</a><a href="#nimba-logistics" onclick="closeMob()">Nimba Logistics</a><a href="#contact" onclick="closeMob()">Contact</a>  <a href="https://people.dithanimbaholdings.co.za" target="_blank" onclick="closeMob()" style="color:var(--gold-dark);font-weight:600">Client Login →</a>
+  <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- HERO -->
-<main id="main-content">
+<!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow"><span class="hero-dot"></span>DithaNimba Holdings &nbsp;·&nbsp; Johannesburg, South Africa</div>
-    <h1 class="hero-h1">Building Africa's<br/><em>Digital Future</em><br/>One System at a Time.</h1>
-    <p class="hero-p">A South African technology holding company developing specialist HR, payroll, cybersecurity and logistics solutions for forward-thinking businesses.</p>
-    <div class="hero-btns">
-      <a href="#divisions" class="btn-gold">Explore Divisions <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="#contact" class="btn-light">Get in Touch</a>
-      <a href="https://people.dithanimbaholdings.co.za" target="_blank" style="color:rgba(255,255,255,0.55);font-size:13px;font-weight:500;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.55)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Client Login</a>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span>Proudly South African · Built for SA businesses</div>
+      <h1>HR &amp; payroll,<br/><em>beautifully simple.</em></h1>
+      <p class="hero-sub">People by DithaNimba Holdings is the cloud HR platform that handles your employees, leave and payroll — PAYE, UIF and BCEA compliant, live in 24 hours. No installation, no spreadsheets.</p>
+      <div class="hero-btns">
+        <a href="#pricing" class="btn btn-primary btn-lg">Start free trial <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact" class="btn btn-ghost btn-lg">Book a demo</a>
+      </div>
+      <div class="hero-note">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No setup fee</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Live in 24 hours</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Cancel anytime</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i></div>
+        <div class="mock-body">
+          <div class="mock-row"><div class="mock-av" style="background:#1a3a5c">TD</div><div class="mock-line"><b></b><span></span></div><div class="mock-badge">Active</div></div>
+          <div class="mock-row"><div class="mock-av" style="background:#0ea5a4">NM</div><div class="mock-line"><b style="width:65%"></b><span style="width:42%"></span></div><div class="mock-badge">Active</div></div>
+          <div class="mock-row"><div class="mock-av" style="background:#C9A84C">SN</div><div class="mock-line"><b style="width:48%"></b><span style="width:30%"></span></div><div class="mock-badge" style="background:#faf3e0;color:#a8842f">On leave</div></div>
+          <div class="mock-row"><div class="mock-av" style="background:#991b1b">ZK</div><div class="mock-line"><b style="width:58%"></b><span style="width:38%"></span></div><div class="mock-badge">Active</div></div>
+        </div>
+      </div>
+      <div class="float-card float-1">
+        <div class="float-ic" style="background:var(--bg-mint)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><b>R 48,200</b><small>Payroll processed</small></div>
+      </div>
+      <div class="float-card float-2">
+        <div class="float-ic" style="background:#faf3e0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><b>24 hours</b><small>To go live</small></div>
+      </div>
     </div>
   </div>
-  <div class="hero-scroll"><div class="hero-scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- STAT BAR -->
-<div class="statbar">
-  <div class="stat reveal"><div class="stat-v">3</div><div class="stat-l">Specialist Divisions</div></div>
-  <div class="stat reveal"><div class="stat-v">SA</div><div class="stat-l">Built Locally</div></div>
-  <div class="stat reveal"><div class="stat-v">24h</div><div class="stat-l">Deployment</div></div>
-  <div class="stat reveal"><div class="stat-v">100%</div><div class="stat-l">Cloud-Native</div></div>
+<!-- ══ TRUST STRIP ══ -->
+<div class="trust">
+  <p>Built for the businesses that keep South Africa running</p>
+  <div class="trust-row">
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Construction</div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16M9 7h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>Retail</div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>Hospitality</div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM12 8v8M8 12h8"/></svg>Clinics</div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7l10-5 10 5-10 5z M2 17l10 5 10-5 M2 12l10 5 10-5"/></svg>SMEs</div>
+  </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-grid">
-    <div>
-      <div class="tag reveal"><span class="tag-dot"></span>Who We Are</div>
-      <h2 class="sh2 reveal">A holding company<br/>built on <em>purpose.</em></h2>
-      <p class="sp reveal">DithaNimba Holdings is a South African technology holding company building specialist digital divisions that solve real operational challenges for SA businesses.</p>
-      <div class="pillar-list reveal">
-        <div class="pillar"><span class="pillar-n">01</span><div><div class="pillar-t">SA-First Design</div><div class="pillar-b">PAYE, UIF and BCEA compliance built into every product from day one — not bolted on as afterthoughts.</div></div></div>
-        <div class="pillar"><span class="pillar-n">02</span><div><div class="pillar-t">Cloud-Native Architecture</div><div class="pillar-b">All solutions are internet-native — accessible from any device, anywhere, with enterprise-grade security standards.</div></div></div>
-        <div class="pillar"><span class="pillar-n">03</span><div><div class="pillar-t">Reseller Partner Network</div><div class="pillar-b">We work with authorised resellers to scale solutions nationally while protecting IP and maintaining quality.</div></div></div>
-        <div class="pillar"><span class="pillar-n">04</span><div><div class="pillar-t">Security by Default</div><div class="pillar-b">No system goes live without a penetration test. Our security division hardens every deployment from day one.</div></div></div>
-      </div>
-    </div>
-
-    <div class="holding-wrap reveal">
-      <div class="holding-card">
-        <div class="holding-head">
-          <div class="holding-hex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
-          <div>
-            <div class="holding-nm">DithaNimba Holdings</div>
-            <div class="holding-sub-lbl">Parent Company</div>
-          </div>
-        </div>
-        <div class="holding-body-txt">Technology holding company driving digital transformation across South Africa through specialist, locally-designed technology divisions.</div>
-        <div class="div-pills">
-          <span class="pill-teal">Nimba People</span>
-          <span class="pill-red">Nimba Security</span>
-          <span class="pill-gold">Nimba Logistics</span>
-        </div>
-      </div>
-      <div class="div-mini-cards">
-        <div class="dmc">
-          <div class="dmc-ic dmc-ic-teal"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
-          <div class="dmc-t">Nimba People</div>
-          <div class="dmc-b">HR &amp; ERP platform for SA businesses</div>
-        </div>
-        <div class="dmc">
-          <div class="dmc-ic dmc-ic-red"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="dmc-t">Nimba Security</div>
-          <div class="dmc-b">Cybersecurity training &amp; pentesting</div>
-        </div>
-        <div class="dmc">
-          <div class="dmc-ic dmc-ic-gold"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          <div class="dmc-t">Nimba Logistics</div>
-          <div class="dmc-b">Logistics &amp; supply chain consulting</div>
-        </div>
-      </div>
-    </div>
+<!-- ══ FEATURES ══ -->
+<span id="nimba-people" style="position:absolute;margin-top:-90px"></span>
+<section id="features">
+  <div class="sec-head reveal">
+    <div class="sec-tag">Everything in one place</div>
+    <h2>One platform for your <em>entire</em> team.</h2>
+    <p>Stop juggling spreadsheets, WhatsApp leave requests and manual payroll. People brings it all together.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="feat-ic" style="background:var(--bg-mint)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Employee Records</h3><p>Full profiles, departments, roles and employment history — one source of truth your whole team can trust.</p></div>
+    <div class="feat reveal"><div class="feat-ic" style="background:#faf3e0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><h3>Payroll Engine</h3><p>Run payroll in one click. PAYE and UIF calculated automatically against the latest SARS tables, with PDF payslips.</p></div>
+    <div class="feat reveal"><div class="feat-ic" style="background:var(--bg-mint)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg></div><h3>Leave Management</h3><p>Digital leave requests, one-tap approvals and live balance tracking — with automatic email notifications.</p></div>
+    <div class="feat reveal"><div class="feat-ic" style="background:#faf3e0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg></div><h3>Analytics Dashboard</h3><p>Headcount, salary trends and workforce insights at a glance. Make decisions with data, not guesswork.</p></div>
+    <div class="feat reveal"><div class="feat-ic" style="background:var(--bg-mint)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3>Works on Any Device</h3><p>Mobile-first and installable as an app. Approve leave from your phone, with Face ID and offline access.</p></div>
+    <div class="feat reveal"><div class="feat-ic" style="background:#faf3e0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Secure &amp; Private</h3><p>Each business runs on its own isolated database. Your data is never mixed with anyone else's. POPIA-aligned.</p></div>
   </div>
 </section>
 
-<!-- DIVISIONS -->
-<section class="divisions" id="divisions">
-  <div class="div-intro">
-    <div class="tag reveal" style="justify-content:center"><span class="tag-dot"></span>Our Divisions</div>
-    <h2 class="sh2 reveal">Three focused divisions.<br/><em>One holding company.</em></h2>
-    <p class="sp reveal">Each division addresses a distinct, high-value problem in the South African business landscape.</p>
-  </div>
-
-  <div class="div-grid reveal">
-    <!-- Nimba People -->
-    <a href="#nimba-people" class="div-card div-people">
-      <div class="div-card-top div-people-top">
-        <div class="div-orb div-people-orb"></div>
-        <span class="div-idx">01 / HR &amp; ERP Solutions</span>
-        <div class="div-icon-wrap">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg>
-        </div>
-        <h3 class="div-title">Nimba People</h3>
-        <p class="div-tagline">Cloud-based HR and payroll management built for South African businesses — PAYE, UIF, leave management and employee tracking in one professional system.</p>
-      </div>
-      <div class="div-card-body">
-        <div class="div-feats">
-          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Employee &amp; Profile Management</div>
-          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>SA Payroll with PAYE &amp; UIF</div>
-          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Leave Request &amp; Approval Workflow</div>
-          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Digital Payslips &amp; Analytics Dashboard</div>
-          <div class="div-feat"><span class="div-feat-tick div-people-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Role-Based Access — Admin &amp; Employee</div>
-        </div>
-        <span class="div-link-btn">Explore Nimba People <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
-    </a>
-
-    <!-- Nimba Security -->
-    <a href="#nimba-security" class="div-card div-security">
-      <div class="div-card-top div-security-top">
-        <div class="div-orb div-security-orb"></div>
-        <span class="div-idx">02 / Cybersecurity Services</span>
-        <div class="div-icon-wrap">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fca5a5" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3 class="div-title">Nimba Security</h3>
-        <p class="div-tagline">Cybersecurity awareness training and penetration testing — protecting SA businesses as they migrate ERP and HR systems to the cloud.</p>
-      </div>
-      <div class="div-card-body">
-        <div class="div-feats">
-          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Staff Security Awareness Training</div>
-          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Social Engineering &amp; Phishing Defence</div>
-          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pre-Handover Penetration Testing</div>
-          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Vulnerability Reports &amp; Remediation</div>
-          <div class="div-feat"><span class="div-feat-tick div-security-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Phishing Simulation Campaigns</div>
-        </div>
-        <span class="div-link-btn">Explore Nimba Security <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
-    </a>
-
-    <!-- Nimba Logistics -->
-    <a href="#nimba-logistics" class="div-card div-logistics">
-      <div class="div-card-top div-logistics-top">
-        <div class="div-orb div-logistics-orb"></div>
-        <span class="div-idx">03 / Freight &amp; Logistics</span>
-        <div class="div-icon-wrap">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d4b05a" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        </div>
-        <h3 class="div-title">Nimba Logistics</h3>
-        <p class="div-tagline">Supply chain and logistics consulting for South African businesses — cutting freight costs, tightening routes and turning logistics into a competitive edge.</p>
-      </div>
-      <div class="div-card-body">
-        <div class="div-feats">
-          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Supply Chain Strategy &amp; Design</div>
-          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Route &amp; Network Optimisation</div>
-          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Freight Cost &amp; Tariff Analysis</div>
-          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Fleet Utilisation Reviews</div>
-          <div class="div-feat"><span class="div-feat-tick div-logistics-tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Warehouse &amp; Distribution Planning</div>
-        </div>
-        <span class="div-link-btn">Explore Nimba Logistics <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- NIMBA PEOPLE -->
-<section class="np-section" id="nimba-people">
-  <div class="tag reveal" style="color:var(--teal-dark)"><span style="width:8px;height:8px;background:var(--teal);border-radius:2px;flex-shrink:0"></span>Nimba People · ERP &amp; HR Solutions</div>
-  <h2 class="sh2 reveal">Your complete HR system,<br/><em>live in 24 hours.</em></h2>
-  <p class="sp reveal">Nimba People replaces spreadsheets, WhatsApp leave requests and manual payroll with one clean, professional cloud platform — accessible from any phone or laptop.</p>
-
-  <div class="feat-grid reveal">
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feat-t">Employee Management</div><div class="feat-b">Full employee profiles, departments, roles and employment history — searchable in real time.</div></div>
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="feat-t">SA Payroll Engine</div><div class="feat-b">Automated PAYE and UIF calculations using current SA tax tables. PDF payslips generated on demand.</div></div>
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="feat-t">Leave Management</div><div class="feat-b">Employees submit leave digitally. HR approves with one click. Status syncs in real-time across all devices.</div></div>
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="feat-t">Analytics Dashboard</div><div class="feat-b">Workforce insights, department breakdowns, salary averages and leave trends in one executive view.</div></div>
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="feat-t">Works on Any Device</div><div class="feat-b">Fully mobile-responsive. HR manages from desktop, employees use their phones — no app needed.</div></div>
-    <div class="feat-card"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e7490" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div><div class="feat-t">Employee Onboarding</div><div class="feat-b">Invite staff by email — they're automatically linked to their HR profile. Zero manual setup required.</div></div>
-  </div>
-
-  <div class="np-cta reveal">
-    <div><h3>See Nimba People in action</h3><p>Interactive demo — no sign-up required. Try all features as HR Admin or Employee.</p></div>
-    <a href="https://nimba-people-demo.netlify.app" target="_blank" class="btn-teal">View Live Demo →</a>
-  </div>
-</section>
-
-<!-- NIMBA SECURITY -->
-<section class="ns-section" id="nimba-security">
-  <div class="ns-grid">
-    <div>
-      <div class="tag reveal" style="color:var(--red-dark)"><span style="width:8px;height:8px;background:var(--red);border-radius:2px;flex-shrink:0"></span>Nimba Security · Cybersecurity Services</div>
-      <h2 class="sh2 reveal">Secure your people<br/><em>before attackers do.</em></h2>
-      <p class="sp reveal">As SA businesses move ERP and HR systems to the cloud, the attack surface grows. Nimba Security closes that gap through training, simulation and rigorous testing — bundled with every Nimba People deployment.</p>
-
-      <div class="reveal">
-        <div class="offering"><div class="offering-head"><div class="offering-t">Security Awareness Training</div><span class="badge">Core Service</span></div><div class="offering-b">Hands-on training covering social engineering, phishing, BEC fraud and SA-specific threats like SARS scams, WhatsApp OTP hijacking and fake supplier banking details.</div></div>
-        <div class="offering"><div class="offering-head"><div class="offering-t">Penetration Testing</div><span class="badge">Pre-Handover</span></div><div class="offering-b">Full pentest before go-live. We find vulnerabilities, exploit them safely, fix critical issues and issue a signed remediation certificate before handover.</div></div>
-        <div class="offering"><div class="offering-head"><div class="offering-t">Phishing Simulation</div><span class="badge">Assessment</span></div><div class="offering-b">Simulated phishing campaigns sent to your staff — click rates reported by department to drive targeted, no-blame awareness training.</div></div>
-        <div class="offering"><div class="offering-head"><div class="offering-t">Ongoing Monitoring</div><span class="badge">Retainer</span></div><div class="offering-b">Post-deployment monitoring, quarterly training refreshers, patch guidance and incident response support for continued protection.</div></div>
-      </div>
-    </div>
-
-    <div>
-      <div class="pentest-wrap reveal">
-        <div class="pentest-hdr">
-          <div class="pentest-hdr-lbl">Our Process</div>
-          <div class="pentest-hdr-t">The 5-Phase Pentest</div>
-        </div>
-        <div class="psteps">
-          <div class="pstep"><div class="pstep-n">01</div><div><div class="pstep-t">Reconnaissance</div><div class="pstep-b">Map attack surface, exposed subdomains, services and employee data available online.</div></div></div>
-          <div class="pstep"><div class="pstep-n">02</div><div><div class="pstep-t">Scanning</div><div class="pstep-b">Vulnerability scanning of all internet-facing ports, APIs and authentication endpoints.</div></div></div>
-          <div class="pstep"><div class="pstep-n">03</div><div><div class="pstep-t">Exploitation</div><div class="pstep-b">Controlled exploitation — credential attacks, injection vulnerabilities, session hijacking.</div></div></div>
-          <div class="pstep"><div class="pstep-n">04</div><div><div class="pstep-t">Social Engineering Test</div><div class="pstep-b">Simulated phishing sent to staff. Click rate measured by department. No blame, only awareness.</div></div></div>
-          <div class="pstep"><div class="pstep-n">05</div><div><div class="pstep-t">Report &amp; Remediate</div><div class="pstep-b">Full findings report. Critical issues fixed. Signed certificate issued before handover.</div></div></div>
-        </div>
-      </div>
-      <div class="ns-cta reveal">
-        <h3>No ERP goes live without a pentest.</h3>
-        <p>Every Nimba People deployment includes a Nimba Security assessment. We attack your system before criminals do — and fix what we find.</p>
-        <a href="#contact" class="btn-red">Request an Assessment</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NIMBA LOGISTICS -->
-<section class="nl-section" id="nimba-logistics">
-  <div class="tag reveal" style="color:var(--gold-dark)"><span style="width:8px;height:8px;background:var(--gold);border-radius:2px;flex-shrink:0"></span>Nimba Logistics · Freight &amp; Logistics Consulting</div>
-  <h2 class="sh2 reveal">Move smarter.<br/><em>Spend less.</em></h2>
-  <p class="sp reveal">Nimba Logistics brings structured supply chain expertise to SA businesses — exposing freight overspend, tightening routes and turning logistics from a cost centre into a competitive edge.</p>
-
-  <div class="feat-grid reveal">
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div class="feat-t">Supply Chain Strategy</div><div class="feat-b">End-to-end review of sourcing, storage and distribution — with a costed roadmap to leaner, more resilient operations.</div></div>
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 013 3v3M15 18H9a3 3 0 01-3-3V9"/></svg></div><div class="feat-t">Route Optimisation</div><div class="feat-b">Data-driven routing and load planning that cuts fuel, mileage and turnaround time across your fleet or carrier mix.</div></div>
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="feat-t">Freight Cost Analysis</div><div class="feat-b">Benchmark freight tariffs and carrier contracts to expose overspend and negotiate stronger rates.</div></div>
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="feat-t">Fleet Utilisation</div><div class="feat-b">Fleet and asset utilisation reviews that surface idle capacity, bottlenecks and quick operational wins.</div></div>
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21V12h6v9"/></svg></div><div class="feat-t">Warehouse &amp; Distribution</div><div class="feat-b">Network and distribution planning — siting, layout and flow design to move stock faster at lower cost.</div></div>
-    <div class="feat-card feat-logistics"><div class="feat-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#92640a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div class="feat-t">SA-Context Advisory</div><div class="feat-b">Practical guidance grounded in South African road, border and freight realities — not generic theory.</div></div>
-  </div>
-
-  <div class="nl-cta reveal">
-    <div><h3>Turn logistics into leverage.</h3><p>Book a consultation and we'll map where your supply chain is leaking time and money.</p></div>
-    <a href="#contact" class="btn-goldcta">Request a Consultation →</a>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="why" id="why">
-  <div style="text-align:center;max-width:560px;margin:0 auto">
-    <div class="tag reveal" style="justify-content:center"><span class="tag-dot"></span>Why DithaNimba</div>
-    <h2 class="sh2 reveal" style="text-align:center">Built for South Africa.<br/><em>No compromises.</em></h2>
-  </div>
-  <div class="why-grid">
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="why-t">SA Labour Law Built In</div><div class="why-b">PAYE, UIF and BCEA compliance baked into every product from day one — not bolted on later.</div></div>
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="why-t">24-Hour Deployment</div><div class="why-b">We handle everything — setup, configuration, staff onboarding and training. Live within one business day.</div></div>
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><div class="why-t">Security Before Handover</div><div class="why-b">Every HR deployment includes a cybersecurity assessment. No system goes live with known vulnerabilities.</div></div>
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div><div class="why-t">Works From Any Device</div><div class="why-b">Cloud-native — your team accesses everything from their phones anywhere, no VPN or office required.</div></div>
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="why-t">Reseller Partner Network</div><div class="why-b">Our reseller programme lets local entrepreneurs sell and earn — we handle all technical deployment.</div></div>
-    <div class="why-card reveal"><div class="why-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.73a16 16 0 006.18 6.18l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.01z"/></svg></div><div class="why-t">Real Ongoing Support</div><div class="why-b">Monthly and annual support plans keep systems updated and secure — with a real person to call.</div></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-grid">
-    <div>
-      <div class="tag reveal"><span class="tag-dot"></span>Get In Touch</div>
-      <h2 class="sh2 reveal">Let's build something<br/><em>together.</em></h2>
-      <p class="sp reveal">Whether you need HR software, a cybersecurity assessment, logistics consulting, or want to become a reseller partner — we'd love to hear from you.</p>
-
-      <div class="c-items reveal">
-        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a></div></div></div>
-        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.73a16 16 0 006.18 6.18l1.22-1.22a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.01z"/></svg></div><div><div class="c-lbl">WhatsApp</div><div class="c-val"><a href="https://wa.me/27000000000" target="_blank">Chat on WhatsApp</a></div></div></div>
-        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="c-lbl">Location</div><div class="c-val">Johannesburg, South Africa</div></div></div>
-        <div class="c-item"><div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><div><div class="c-lbl">Website</div><div class="c-val"><a href="https://dithanimbaholdings.co.za">dithanimbaholdings.co.za</a></div></div></div>
-      </div>
-
-      <div class="cdivs reveal">
-        <div class="cdivs-lbl">Our Divisions</div>
-        <a href="#nimba-people" class="cdiv-link"><span class="cdot" style="background:var(--teal)"></span>Nimba People — HR &amp; ERP Solutions</a>
-        <a href="#nimba-security" class="cdiv-link"><span class="cdot" style="background:var(--red)"></span>Nimba Security — Cybersecurity Services</a>
-        <a href="#nimba-logistics" class="cdiv-link"><span class="cdot" style="background:var(--gold)"></span>Nimba Logistics — Freight &amp; Logistics Consulting</a>
-      </div>
-    </div>
-
+<!-- ══ PRODUCT SPLIT 1 ══ -->
+<section id="product" style="background:var(--bg-soft)">
+  <div class="split">
     <div class="reveal">
-      <form class="form" onsubmit="submitForm(event)">
-        <div class="frow">
-          <div class="field"><label>First Name</label><input type="text" placeholder="Mondli" required/></div>
-          <div class="field"><label>Last Name</label><input type="text" placeholder="Maphumulo" required/></div>
+      <div class="split-tag" style="background:var(--bg-mint);color:var(--teal)">Payroll</div>
+      <h2>Run payroll in minutes,<br/>not days.</h2>
+      <p class="lead">No more manual tax calculations or spreadsheet errors. People does the maths for you and produces professional payslips your staff can download instantly.</p>
+      <div class="checklist">
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Automatic PAYE &amp; UIF</b> <span>— always current with SARS tables.</span></div></div>
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>One-click payslips</b> <span>— branded PDFs, emailed to staff automatically.</span></div></div>
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Flat monthly rate</b> <span>— same price for 5 or 50 employees.</span></div></div>
+      </div>
+      <a href="#pricing" class="btn btn-primary">See pricing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-img reveal">
+      <div class="shot">
+        <div class="shot-head"><div class="shot-title">Payroll · March 2026</div><div class="mock-badge">Processed</div></div>
+        <div class="shot-stat">
+          <div><b>5</b><small>Employees</small></div>
+          <div><b>R48k</b><small>Gross</small></div>
+          <div><b>R7.2k</b><small>PAYE</small></div>
         </div>
-        <div class="field"><label>Email</label><input type="email" placeholder="you@company.co.za" required/></div>
-        <div class="field"><label>Company</label><input type="text" placeholder="Your Company Name"/></div>
-        <div class="field">
-          <label>I'm Interested In</label>
-          <select>
-            <option value="">Select a service...</option>
-            <option>Nimba People — HR &amp; ERP System</option>
-            <option>Nimba Security — Awareness Training</option>
-            <option>Nimba Security — Penetration Testing</option>
-            <option>Nimba Logistics — Logistics Consulting</option>
-            <option>Becoming a Reseller Partner</option>
-            <option>Full Bundle (People + Security)</option>
-            <option>General Enquiry</option>
-          </select>
-        </div>
-        <div class="field"><label>Message</label><textarea placeholder="Tell us about your business and what you're looking for..."></textarea></div>
-        <button type="submit" class="btn-gold" aria-label="Send contact form">Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        <div id="form-ok">✓ Message sent. We'll be in touch within 24 hours.</div>
-      </form>
+        <div class="shot-bar"><i style="width:88%;background:var(--teal)"></i></div>
+        <div class="shot-bar"><i style="width:64%;background:var(--gold)"></i></div>
+        <div class="shot-bar"><i style="width:52%;background:var(--navy)"></i></div>
+        <div class="shot-bar"><i style="width:73%;background:var(--teal)"></i></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ══ PRODUCT SPLIT 2 ══ -->
+<section>
+  <div class="split alt">
+    <div class="reveal">
+      <div class="split-tag" style="background:#faf3e0;color:var(--gold-d)">Leave &amp; Self-Service</div>
+      <h2>Give your team<br/>self-service access.</h2>
+      <p class="lead">Employees request leave, check balances and download payslips themselves — without ever emailing HR. Managers approve with one tap.</p>
+      <div class="checklist">
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Digital leave requests</b> <span>— with automatic SA leave-year tracking.</span></div></div>
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Email notifications</b> <span>— managers alerted instantly, staff kept informed.</span></div></div>
+        <div class="check"><div class="check-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0ea5a4" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b>Self-service payslips</b> <span>— staff download their own, anytime.</span></div></div>
+      </div>
+      <a href="https://people.dithanimbaholdings.co.za" target="_blank" class="btn btn-ghost">Try the live app <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-img reveal">
+      <div class="shot">
+        <div class="shot-head"><div class="shot-title">Leave Requests</div><div class="mock-badge" style="background:#faf3e0;color:#a8842f">2 pending</div></div>
+        <div class="mock-row" style="background:#fff;border:1px solid var(--border)"><div class="mock-av" style="background:#0ea5a4">NM</div><div class="mock-line"><b style="width:60%"></b><span style="width:40%"></span></div><div class="mock-badge">Approved</div></div>
+        <div class="mock-row" style="background:#fff;border:1px solid var(--border)"><div class="mock-av" style="background:#C9A84C">SN</div><div class="mock-line"><b style="width:50%"></b><span style="width:32%"></span></div><div class="mock-badge" style="background:#faf3e0;color:#a8842f">Pending</div></div>
+        <div class="mock-row" style="background:#fff;border:1px solid var(--border)"><div class="mock-av" style="background:#991b1b">ZK</div><div class="mock-line"><b style="width:55%"></b><span style="width:36%"></span></div><div class="mock-badge" style="background:#faf3e0;color:#a8842f">Pending</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS BAND ══ -->
+<section>
+  <div class="stats-band reveal">
+    <div class="stat-box"><b>24h</b><span>To go live</span></div>
+    <div class="stat-box"><b>R0</b><span>Setup fee</span></div>
+    <div class="stat-box"><b>100%</b><span>Cloud-native</span></div>
+    <div class="stat-box"><b>SA</b><span>Built &amp; hosted locally</span></div>
+  </div>
+</section>
+
+<!-- ══ SECURITY (Nimba Security division) ══ -->
+<span id="nimba-security" style="position:absolute;margin-top:-90px"></span>
+<section id="security" style="background:var(--navy);color:#fff">
+  <div class="split">
+    <div class="reveal">
+      <div class="split-tag" style="background:rgba(201,168,76,0.15);color:var(--gold)">Nimba Security Division</div>
+      <h2 style="color:#fff">Security isn't an<br/>afterthought. It's day one.</h2>
+      <p class="lead" style="color:rgba(255,255,255,0.72)">Every DithaNimba platform is hardened by our in-house cybersecurity division. No system goes live without a penetration test — your employees' data stays protected.</p>
+      <div class="checklist">
+        <div class="check"><div class="check-ic" style="background:rgba(255,255,255,0.1)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b style="color:#fff">Penetration tested</b> <span style="color:rgba(255,255,255,0.65)">— before every deployment.</span></div></div>
+        <div class="check"><div class="check-ic" style="background:rgba(255,255,255,0.1)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b style="color:#fff">Isolated databases</b> <span style="color:rgba(255,255,255,0.65)">— your data never mixes with another business.</span></div></div>
+        <div class="check"><div class="check-ic" style="background:rgba(255,255,255,0.1)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><div><b style="color:#fff">Security awareness training</b> <span style="color:rgba(255,255,255,0.65)">— for your staff, available on request.</span></div></div>
+      </div>
+      <a href="#contact" class="btn btn-gold">Talk to our security team</a>
+    </div>
+    <div class="split-img reveal" style="background:var(--navy-deep);border-color:rgba(255,255,255,0.1)">
+      <div class="shot">
+        <div class="shot-head"><div class="shot-title" style="color:#fff">Security Posture</div><div class="mock-badge" style="background:rgba(14,165,164,0.2);color:#4fd1d0">Protected</div></div>
+        <div class="shot-stat">
+          <div style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><b style="color:var(--gold)">A+</b><small style="color:rgba(255,255,255,0.5)">SSL grade</small></div>
+          <div style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><b style="color:var(--gold)">256</b><small style="color:rgba(255,255,255,0.5)">bit AES</small></div>
+          <div style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><b style="color:var(--gold)">0</b><small style="color:rgba(255,255,255,0.5)">breaches</small></div>
+        </div>
+        <div class="shot-bar" style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><i style="width:100%;background:var(--teal)"></i></div>
+        <div class="shot-bar" style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><i style="width:94%;background:var(--gold)"></i></div>
+        <div class="shot-bar" style="background:var(--navy);border-color:rgba(255,255,255,0.1)"><i style="width:88%;background:var(--teal)"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section id="pricing" style="background:var(--bg-soft)">
+  <div class="sec-head reveal">
+    <div class="sec-tag gold">Simple, transparent pricing</div>
+    <h2>Flat pricing. <em>No per-head fees.</em></h2>
+    <p>Pay the same whether you have 5 or 50 employees — unlike the big payroll vendors who charge per person.</p>
+  </div>
+  <div class="price-grid">
+    <div class="price reveal">
+      <div class="price-name">Starter</div>
+      <div class="price-amt">R1,500<small>/mo</small></div>
+      <div class="price-sub">Month-to-month. Cancel after a 3-month minimum.</div>
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>All features included</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Cloud hosted &amp; maintained</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Email support</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Live in 24 hours</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost">Get started</a>
+    </div>
+    <div class="price feat-plan reveal">
+      <div class="price-pop">Best value</div>
+      <div class="price-name">Annual</div>
+      <div class="price-amt">R1,200<small>/mo</small></div>
+      <div class="price-sub">Billed R14,400 annually. Save R3,600 a year — 25% cheaper.</div>
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Everything in Starter</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Priority support</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Save 25% vs monthly</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Locked-in rate for 12 months</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Get started</a>
+    </div>
+    <div class="price reveal">
+      <div class="price-name">Own It</div>
+      <div class="price-amt">R13,500<small> once</small></div>
+      <div class="price-sub">R3,500 cloud &amp; domain setup + R10,000 solution fee.</div>
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Hosted on your own domain</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Branded to your business</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No monthly fees</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>R350/hr support as needed</li>
+      </ul>
+      <a href="#contact" class="btn btn-ghost">Enquire</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIAL ══ -->
+<section>
+  <div class="quote-wrap reveal">
+    <div class="quote-mark">"</div>
+    <blockquote>We went from chasing leave forms on WhatsApp to running payroll in one afternoon. People paid for itself in the first month.</blockquote>
+    <div class="quote-author">
+      <div class="quote-av">JM</div>
+      <div style="text-align:left"><b>Joseph Mthembu</b><span>Operations Director, SA Construction SME</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section id="contact">
+  <div class="cta-band reveal">
+    <h2>Ready to modernise<br/>your HR?</h2>
+    <p>Book a free demo and we'll have your business live on People within 24 hours.</p>
+    <div class="hero-btns">
+      <a href="mailto:info@dithanimbaholdings.co.za" class="btn btn-gold btn-lg">Email us <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://people.dithanimbaholdings.co.za" target="_blank" class="btn btn-ghost btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.25)">Try the live app</a>
+    </div>
+    <p style="margin-top:28px;font-size:15px"><strong style="color:var(--gold)">info@dithanimbaholdings.co.za</strong></p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="foot-grid">
-    <div>
-      <a href="#home" class="nav-logo">
-        <div class="nav-hex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
-        <span class="nav-name" style="color:#fff">DithaNimba Holdings</span>
+    <div class="foot-brand">
+      <a href="#home" class="logo">
+        <div class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M2 12h20"/></svg></div>
+        <div class="logo-txt">DithaNimba<small>Holdings</small></div>
       </a>
-      <p class="foot-about">Building South Africa's digital infrastructure through specialist technology divisions — one business at a time.</p>
+      <p>A South African technology holding company building specialist HR, payroll and cybersecurity solutions for forward-thinking businesses.</p>
     </div>
-    <div class="foot-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#divisions">Divisions</a></li><li><a href="#why">Why DithaNimba</a></li><li><a href="#contact">Contact</a></li></ul></div>
-    <div class="foot-col"><h4>Nimba People</h4><ul><li><a href="#nimba-people">Features</a></li><li><a href="https://nimba-people-demo.netlify.app" target="_blank">Live Demo</a></li><li><a href="#contact">Reseller Programme</a></li><li><a href="#contact">Pricing</a></li></ul></div>
-    <div class="foot-col"><h4>Nimba Security</h4><ul><li><a href="#nimba-security">Services</a></li><li><a href="#nimba-security">Pentest Process</a></li><li><a href="#nimba-security">Training</a></li><li><a href="#contact">Book Assessment</a></li></ul></div>
-    <div class="foot-col"><h4>Nimba Logistics</h4><ul><li><a href="#nimba-logistics">Consulting</a></li><li><a href="#nimba-logistics">Route Optimisation</a></li><li><a href="#nimba-logistics">Freight Analysis</a></li><li><a href="#contact">Book a Consultation</a></li></ul></div>
+    <div class="foot-col">
+      <h4>Product</h4>
+      <a href="#features">Features</a>
+      <a href="#product">Payroll</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://people.dithanimbaholdings.co.za" target="_blank">Client Login</a>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="#security">Nimba Security</a>
+      <a href="#contact">Contact</a>
+      <a href="#home">About</a>
+    </div>
+    <div class="foot-col">
+      <h4>Get in touch</h4>
+      <a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a>
+      <a href="#contact">Book a demo</a>
+      <a href="#">Johannesburg, South Africa</a>
+    </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2025 DithaNimba Holdings. All rights reserved.</span>
-    <span>Johannesburg, ZA &nbsp;·&nbsp; <a href="mailto:info@dithanimbaholdings.co.za">info@dithanimbaholdings.co.za</a> &nbsp;·&nbsp; <a href="https://wa.me/27000000000">WhatsApp</a></span>
+    <p>© 2026 DithaNimba Holdings (Pty) Ltd. All rights reserved.</p>
+    <div class="foot-social">
+      <a href="#" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.5 18v-7H6v7h2.5zM7.2 9.6a1.4 1.4 0 100-2.8 1.4 1.4 0 000 2.8zM18 18v-3.9c0-2.1-1.1-3.1-2.6-3.1-1.2 0-1.7.7-2 1.1V11H10.9c0 .7 0 7 0 7h2.5v-3.9c0-.2 0-.4.1-.6.2-.5.6-1 1.3-1 .9 0 1.3.7 1.3 1.8V18H18z"/></svg></a>
+      <a href="mailto:info@dithanimbaholdings.co.za" aria-label="Email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 5L2 7"/></svg></a>
+    </div>
   </div>
 </footer>
-</main>
 
 <script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
-
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px -24px 0px' });
-
-document.querySelectorAll('.reveal').forEach((el, i) => {
-  const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
-  el.style.transitionDelay = (siblings.indexOf(el) * 0.08) + 's';
-  obs.observe(el);
-});
-
-function toggleMenu(){
-  const m=document.getElementById('mob');
-  const h=document.getElementById('hbg');
-  m.classList.toggle('open');
-  h.setAttribute('aria-expanded', m.classList.contains('open'));
-}
-function closeMob(){document.getElementById('mob').classList.remove('open')}
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
-  });
-});
-function submitForm(e){
-  e.preventDefault();
-  const f = e.target;
-  const name = f.querySelector('input[type=text]').value;
-  const email = f.querySelector('input[type=email]').value;
-  const company = f.querySelectorAll('input[type=text]')[1]?.value || '';
-  const service = f.querySelector('select').value;
-  const msg = f.querySelector('textarea').value;
-  const body = encodeURIComponent(
-    'Name: '+name+'\nEmail: '+email+'\nCompany: '+company+
-    '\nInterested in: '+service+'\n\nMessage:\n'+msg
-  );
-  window.location.href = 'mailto:info@dithanimbaholdings.co.za?subject=Enquiry from '+encodeURIComponent(name)+'&body='+body;
-  const ok = document.getElementById('form-ok');
-  ok.style.display = 'block';
-  f.reset();
-  setTimeout(() => ok.style.display = 'none', 6000);
-}
+// Nav scroll state
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+// Reveal on scroll
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Mobile menu close on click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('show')));
 </script>
-
-<script>
-// Load Google Fonts asynchronously - progressive enhancement
-(function(){
-  var l=document.createElement('link');
-  l.rel='stylesheet';
-  l.href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap';
-  document.head.appendChild(l);
-})();
-</script>
-
-<!-- WhatsApp float -->
-<a href="https://wa.me/27000000000?text=Hi%20DithaNimba%20Holdings%2C%20I%27m%20interested%20in%20your%20services." 
-   class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <span class="wa-tooltip">Chat with us</span>
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<style>.nav-links.show{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 6vw;gap:18px;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}</style>
 </body>
 </html>
